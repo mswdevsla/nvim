@@ -1,0 +1,31 @@
+{
+  "eslint.enable": true,
+  "eslint.nodePath": "./node_modules",
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.disableSuccessMessage": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "css",
+    "dart"
+  ],
+  "tsserver.formatOnType": true,
+  "diagnostic.errorSign": ">>",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  "list.source.grep.command": "rg",
+  "list.source.grep.excludePatterns": ["node_modules"],
+  "suggest.enablePreview": true,
+  "tsserver.log": "verbose",
+  "flutter.lsp.initialization.closingLabels": true,
+  "coc.preferences.colorSupport": false
+}
