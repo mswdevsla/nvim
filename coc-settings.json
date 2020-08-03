@@ -9,14 +9,15 @@
     "typescriptreact"
   ],
   "prettier.disableSuccessMessage": true,
+  "coc.preferences.formatOnType": false,
   "coc.preferences.formatOnSaveFiletypes": [
+    "dart",
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
     "json",
-    "css",
-    "dart"
+    "css"
   ],
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
@@ -27,5 +28,7 @@
   "suggest.enablePreview": true,
   "tsserver.log": "verbose",
   "flutter.lsp.initialization.closingLabels": true,
-  "coc.preferences.colorSupport": false
+  "flutter.provider.hot-reload": true,
+  "coc.preferences.colorSupport": false,
+  "html.autoClosingTags": true
 }
