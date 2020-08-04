@@ -21,7 +21,7 @@ Plug 'morhetz/gruvbox' " 인텔리제이 색
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 call plug#end()
-source $HOME/.config/nvim/plug-config/coc.vim
+"source $HOME/.config/nvim/plug-config/coc.vim
 
 colorscheme gruvbox
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
