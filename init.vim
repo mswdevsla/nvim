@@ -50,7 +50,6 @@ set noic
 set clipboard=unnamed
 set noswapfile
 set ic
-
 filetype off                  " required
 
 set showmatch
@@ -103,6 +102,7 @@ nmap <leader>z  <Plug>(coc-fix-current)
 imap cll console.log(<Esc>==f(a
 nmap cll yiwocll<Esc>p 
 vmap cll yocll<Esc>p
+imap arwf ()=>{}<ESC>ciB<CR>
 " noremap " ""<left>
 " inoremap ' ''<left>
 " inoremap ( ()<left>
@@ -154,7 +154,7 @@ let g:onedark_terminal_italics = 1
 let s:fontsize = 20
 let g:diagnostic_enable_virtual_text = 0
 let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir]]', '\.sass-cache$']
-
+let g:coc_global_extensions = ['coc-solargraph']
 let s:denite_options = {'default' : {
 \ 'split': 'floating',
 \ 'start_filter': 1,
@@ -181,7 +181,8 @@ let g:coc_global_extensions =[
 \'coc-highlight',
 \'coc-lists',
 \'coc-flutter',
-\'coc-styled-components']
+\'coc-styled-components',
+\'coc-solargraph']
 
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
@@ -246,24 +247,39 @@ nmap <leader><space>  <Plug>(coc-codeaction-selected)
 nmap <silent><leader><space>c <Plug>(coc-codelens-action)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
-nmap <F8> :Git status<CR>
-nmap <F9> :Gdiffsplit<CR>
-nmap <F10> :Git add %:p<CR>
+nmap <TAB><TAB> a<TAB>
+nmap <TAB>p ea<space><ESC>p
+map <TAB>P bPa<space><ESC>
+nmap <F9> :Git status<CR>
+nmap <F10> :Gdiffsplit<CR>
+nmap <F11> :Git add %:p<CR>
+
+nmap <leader>B ysiBBysaB`a$<ESC>
+imap <C-h> <C-o>h
+imap <C-j> <C-g>j
+imap <C-k> <C-g>k
+imap <C-l> <Right>
+nmap <Leader><Leader> <Plug>BookmarkToggle
+nmap <Leader>a <Plug>BookmarkShowAll
+
 
 iab cotns const
 iab conts const
 iab consts const
 set signcolumn=yes
-
 nmap ]h <Plug>(GitGutterNextHunk) "same as default
 nmap [h <Plug>(GitGutterPrevHunk) "same as default
-
-nmap ghs <Plug>(GitGutterStageHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)
+imap jk <ESC>
 
 let g:gitgutter_sign_added = '✚'
 let g:gitgutter_sign_modified = '✹'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
-let g:dart_style_guide = 3
+"nnoremap <A-j> :m .+1<CR>==
+"nnoremap <A-k> :m .-2<CR>==
+"inoremap <A-j> <Esc>:m .+1<CR>==gi
+"inoremap <A-k> <Esc>:m .-2<CR>==gi
+"vnoremap <A-j> :m '>+1<CR>gv=gv
+"vnoremap <A-k> :m '<-2<CR>gv=gv
+let g:bookmark_no_default_key_mappings = 1

@@ -17,7 +17,8 @@
     "typescript",
     "typescriptreact",
     "json",
-    "css"
+    "css",
+    "ruby"
   ],
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
@@ -30,5 +31,9 @@
   "flutter.lsp.initialization.closingLabels": true,
   "flutter.provider.hot-reload": true,
   "coc.preferences.colorSupport": false,
-  "html.autoClosingTags": true
+  "html.autoClosingTags": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true,
+  "solargraph.useBundler": true
 }
