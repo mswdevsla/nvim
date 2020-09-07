@@ -1,0 +1,14 @@
+[user]
+	email = junghohwang@ipageon.com\n
+	name = jungho Hwang
+[core]
+		editor = nvim
+[diff]
+	    tool = vimdiff
+[merge]
+	    tool = vimdiff
+		    conflictstyle = diff3
+[mergetool "vimdiff"]
+	    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[mergetool]
+	keepBackup = false
