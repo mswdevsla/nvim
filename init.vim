@@ -16,12 +16,39 @@ Plug 'mattesgroeger/vim-bookmarks'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
 Plug 'ap/vim-css-color'
-Plug 'unblevable/quick-scope' " f 키로 이동할 포인트를 색으로 표시해줌
+" Plug 'unblevable/quick-scope' " f 키로 이동할 포인트를 색으로 표시해줌
 Plug 'morhetz/gruvbox' " 인텔리제이 색
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-rails'
+Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kana/vim-textobj-user'
+Plug 'mattn/vim-textobj-url'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-line'
+Plug 'thinca/vim-textobj-comment'
+Plug 'universal-ctags/ctags'
+Plug 'majutsushi/tagbar'
+Plug 'kjwon15/vim-transparent'
 call plug#end()
 "source $HOME/.config/nvim/plug-config/coc.vim
+let g:coc_global_extensions =[
+\'coc-css',
+\'coc-eslint',
+\'coc-json',
+\'coc-prettier',
+\'coc-python',
+\'coc-snippets',
+\'coc-tsserver',
+\'coc-vimlsp',
+\'coc-html', 
+\'coc-highlight',
+\'coc-lists',
+\'coc-flutter',
+\'coc-styled-components',
+\'coc-solargraph',
+\'coc-angular']
 
 colorscheme gruvbox
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
@@ -82,6 +109,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
+nnoremap <Leader>ex :Sex<CR>
 map <F3> <ESC>:NERDTreeToggle<CR>
 imap <F3> <ESC>:NERDTreeToggle<CR>
 "start FZF 
@@ -168,21 +196,6 @@ let s:denite_options = {'default' : {
 \ 'winrow': 1,
 \ 'vertical_preview': 1
 \ }}
-let g:coc_global_extensions =[
-\'coc-css',
-\'coc-eslint',
-\'coc-json',
-\'coc-prettier',
-\'coc-python',
-\'coc-snippets',
-\'coc-tsserver',
-\'coc-vimlsp',
-\'coc-html', 
-\'coc-highlight',
-\'coc-lists',
-\'coc-flutter',
-\'coc-styled-components',
-\'coc-solargraph']
 
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
@@ -262,7 +275,10 @@ imap <C-l> <Right>
 nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>a <Plug>BookmarkShowAll
 
+map  <Leader>ef <Plug>(easymotion-bd-f)
+nmap <Leader>ef <Plug>(easymotion-overwin-f)
 
+nmap <F8> :TagbarToggle<CR>
 iab cotns const
 iab conts const
 iab consts const
@@ -276,10 +292,12 @@ let g:gitgutter_sign_modified = '✹'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
-"nnoremap <A-j> :m .+1<CR>==
+let g:airline#extensions#tabline#enabled = 1
+"nnoremapirline#extensions#tabline#enabled = 1u <A-j> :m .+1<CR>==
 "nnoremap <A-k> :m .-2<CR>==
 "inoremap <A-j> <Esc>:m .+1<CR>==gi
 "inoremap <A-k> <Esc>:m .-2<CR>==gi
 "vnoremap <A-j> :m '>+1<CR>gv=gv
 "vnoremap <A-k> :m '<-2<CR>gv=gv
 let g:bookmark_no_default_key_mappings = 1
+

@@ -34,6 +34,5 @@
   "html.autoClosingTags": true,
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
-  "solargraph.hover": true,
-  "solargraph.useBundler": true
+  "solargraph.hover": true
 }
