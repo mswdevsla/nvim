@@ -49,7 +49,7 @@ let g:coc_global_extensions =[
 \'coc-flutter',
 \'coc-styled-components',
 \'coc-solargraph',
-\'coc-angular'
+\'coc-angular',
 \'coc-fzf-preview']
 
 colorscheme gruvbox
@@ -78,7 +78,7 @@ set nocompatible              " be iMproved, required
 set noic
 set clipboard=unnamed
 set noswapfile
-set ic
+" set ic
 filetype off                  " required
 
 set showmatch
@@ -111,7 +111,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
-nnoremap <Leader>ex :Sex<CR>
+nnoremap <Leader>ex :Vex<CR>
 map <F3> <ESC>:NERDTreeToggle<CR>
 imap <F3> <ESC>:NERDTreeToggle<CR>
 "start FZF 
@@ -295,6 +295,7 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
 let g:airline#extensions#tabline#enabled = 1
+let g:NERDTreeWinSize=60
 "nnoremapirline#extensions#tabline#enabled = 1u <A-j> :m .+1<CR>==
 "nnoremap <A-k> :m .-2<CR>==
 "inoremap <A-j> <Esc>:m .+1<CR>==gi
