@@ -18,6 +18,8 @@
     "typescriptreact",
     "json",
     "css",
+    "scss",
+    "html",
     "ruby"
   ],
   "tsserver.formatOnType": true,

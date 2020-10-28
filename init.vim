@@ -31,6 +31,7 @@ Plug 'thinca/vim-textobj-comment'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'kjwon15/vim-transparent'
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins'  }
 call plug#end()
 "source $HOME/.config/nvim/plug-config/coc.vim
 let g:coc_global_extensions =[
@@ -48,7 +49,8 @@ let g:coc_global_extensions =[
 \'coc-flutter',
 \'coc-styled-components',
 \'coc-solargraph',
-\'coc-angular']
+\'coc-angular'
+\'coc-fzf-preview']
 
 colorscheme gruvbox
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
