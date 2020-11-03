@@ -112,14 +112,14 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
-map <F3> <ESC>:NERDTreeToggle<CR>
-imap <F3> <ESC>:NERDTreeToggle<CR>
+map <silent><space> <ESC>:NERDTreeToggle<CR>
+imap <silent><space> <ESC>:NERDTreeToggle<CR>
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> <F4> :Buffers<CR>
 "end FZF
 nnoremap <silent> K :call CocAction('doHover')<CR>
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <F3> :<C-u>CocList diagnostics<cr>
 nnoremap <Leader>3 :b#<CR>      " previous buffer
 nnoremap <Leader>n :bn<CR>      " next buffer
 nnoremap <Leader>b :bp<CR>      " 이전 buffer
@@ -133,13 +133,6 @@ imap cll console.log(<Esc>==f(a
 nmap cll yiwocll<Esc>p 
 vmap cll yocll<Esc>p
 imap arwf ()=>{}<ESC>ciB<CR>
-" noremap " ""<left>
-" inoremap ' ''<left>
-" inoremap ( ()<left>
-" inoremap [ []<left>
-" inoremap { {}<left>
-" inoremap {<CR> {<CR>}<ESC>O
-" inoremap {;<CR> {<CR>};<ESC>O
 
 
 "입력모드에서 탭눌렀을때 진짜 탭키로 인식하게 해줌
@@ -175,7 +168,7 @@ endfunction
 " Keymapping for grep word under cursor with interactive mode
 nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
 "buffer 에서 검색
-nnoremap <silent> <space>cf :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+" nnoremap <silent> <space>cf :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
 "coc-list end
 
@@ -207,42 +200,6 @@ function! TrailingSpaceHighlights() abort
   highlight Trail ctermbg=red guibg=red
   call matchadd('Trail', '\s\+$', 100)
 endfunction
-" set winhl=Normal:PMenu
-" hi NormalFloat guibg=#262931
-" " hi CocFloating ctermfg=Red guibg=#262931
-" highlight CocErrorHighlight ctermfg=Red  guifg=#ff0000
-" " coc.nvim color changes
-"  hi  CocErrorSign ctermfg=Red  guifg=#ff0000
-" " hi link CocWarningSign Number
-" " hi link CocInfoSign Type
-" " " Make background transparent for many things
-" hi Normal ctermbg=NONE guibg=NONE
-" hi NonText ctermbg=NONE guibg=NONE
-" hi LineNr ctermfg=NONE guibg=NONE
-" hi SignColumn ctermfg=NONE guibg=NONE
-" hi StatusLine guifg=#16252b guibg=#6699CC
-" hi StatusLineNC guifg=#16252b guibg=#16252b
-" " Try to hide vertical spit and end of buffer symbol
-" hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
-" hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
-
-" " Customize NERDTree directory
-" hi NERDTreeCWD guifg=#99c794
-
-" " Make background color transparent for git changes
-" hi SignifySignAdd guibg=NONE
-" hi SignifySignDelete guibg=NONE
-" hi SignifySignChange guibg=NONE
-
-" " Highlight git change signs
-" hi SignifySignAdd guifg=#99c794
-" hi SignifySignDelete guifg=#ec5f67
-" hi SignifySignChange guifg=#c594c5
-" highlight Cursor guibg=#626262
-" highlight Pmenu ctermbg=gray guibg=gray
-" hi Comment ctermfg=30
-" highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-" highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 autocmd CursorHold * silent call CocActionAsync('highlight')
 "highlight end
 
@@ -296,11 +253,14 @@ let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
 let g:airline#extensions#tabline#enabled = 1
 let g:NERDTreeWinSize=60
-"nnoremapirline#extensions#tabline#enabled = 1u <A-j> :m .+1<CR>==
-"nnoremap <A-k> :m .-2<CR>==
-"inoremap <A-j> <Esc>:m .+1<CR>==gi
-"inoremap <A-k> <Esc>:m .-2<CR>==gi
-"vnoremap <A-j> :m '>+1<CR>gv=gv
-"vnoremap <A-k> :m '<-2<CR>gv=gv
 let g:bookmark_no_default_key_mappings = 1
 
+
+"yank to clibboard window용
+let s:clip = '/mnt/c/Windows/System32/clip.exe' 
+if executable(s:clip)
+	    augroup WSLYank
+			autocmd!
+			autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
+		augroup END
+end
