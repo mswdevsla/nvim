@@ -227,10 +227,10 @@ nmap <F10> :Gdiffsplit<CR>
 nmap <F11> :Git add %:p<CR>
 
 nmap <leader>B ysiBBysaB`a$<ESC>
-imap <C-h> <C-o>h
-imap <C-j> <C-g>j
-imap <C-k> <C-g>k
-imap <C-l> <Right>
+ imap <C-h> <C-o>h
+ imap <C-j> <C-g>j
+ imap <C-k> <C-g>k
+ imap <C-l> <Right>
 nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>a <Plug>BookmarkShowAll
 
@@ -254,6 +254,8 @@ let g:gitgutter_sign_modified_removed = '-'
 let g:airline#extensions#tabline#enabled = 1
 let g:NERDTreeWinSize=60
 let g:bookmark_no_default_key_mappings = 1
+
+nmap <Leader>s :Startify<CR>
 
 
 "yank to clibboard window용
