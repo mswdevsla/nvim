@@ -116,7 +116,7 @@ map <silent><space> <ESC>:NERDTreeToggle<CR>
 imap <silent><space> <ESC>:NERDTreeToggle<CR>
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
-nnoremap <silent> <F4> :Buffers<CR>
+nnoremap <silent> \ :Buffers<CR>
 "end FZF
 nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <silent> <F3> :<C-u>CocList diagnostics<cr>
