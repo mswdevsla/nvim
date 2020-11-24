@@ -50,7 +50,9 @@ let g:coc_global_extensions =[
 \'coc-styled-components',
 \'coc-solargraph',
 \'coc-angular',
-\'coc-fzf-preview']
+\'coc-fzf-preview',
+\'coc-ultisnips',
+\'coc-neosnippet']
 
 colorscheme gruvbox
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
@@ -61,7 +63,8 @@ colorscheme gruvbox
 let mapleader=","
 
 let g:user_emmet_leader_key='<C-Z>'
-set autoindent
+" set autoindent
+set nopaste
 set cindent
 set smartindent
 set tabstop=4
@@ -235,8 +238,8 @@ nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>a <Plug>BookmarkShowAll
 nmap <Leader>x <Plug>BookmarkClearAll
 
-map  <Leader>ef <Plug>(easymotion-bd-f)
-nmap <Leader>ef <Plug>(easymotion-overwin-f)
+map  tt <Plug>(easymotion-bd-f)
+nmap tt <Plug>(easymotion-overwin-f)
 
 nmap <F8> :TagbarToggle<CR>
 iab cotns const
@@ -256,6 +259,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:NERDTreeWinSize=60
 let g:bookmark_no_default_key_mappings = 1
 
+
+"let g:UltiSnipsExpandTrigger="<Tab>"
+"let g:UltiSnipsJumpForwardTrigger="<Tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
+""let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+
 nmap <Leader>s :Startify<CR>
 
 
@@ -267,3 +278,5 @@ if executable(s:clip)
 			autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
 		augroup END
 end
+
+
