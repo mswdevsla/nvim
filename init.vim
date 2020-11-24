@@ -233,6 +233,7 @@ nmap <leader>B ysiBBysaB`a$<ESC>
  imap <C-l> <Right>
 nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>a <Plug>BookmarkShowAll
+nmap <Leader>x <Plug>BookmarkClearAll
 
 map  <Leader>ef <Plug>(easymotion-bd-f)
 nmap <Leader>ef <Plug>(easymotion-overwin-f)
