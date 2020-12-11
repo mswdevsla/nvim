@@ -31,6 +31,8 @@ Plug 'thinca/vim-textobj-comment'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'kjwon15/vim-transparent'
+Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins'  }
 call plug#end()
 "source $HOME/.config/nvim/plug-config/coc.vim
@@ -52,6 +54,7 @@ let g:coc_global_extensions =[
 \'coc-angular',
 \'coc-fzf-preview',
 \'coc-ultisnips',
+\'coc-elixir',
 \'coc-neosnippet']
 
 colorscheme gruvbox
@@ -63,7 +66,7 @@ colorscheme gruvbox
 let mapleader=","
 
 let g:user_emmet_leader_key='<C-Z>'
-" set autoindent
+set autoindent
 set nopaste
 set cindent
 set smartindent
@@ -82,7 +85,9 @@ set noic
 set clipboard=unnamed
 set noswapfile
 " set ic
-filetype off                  " required
+" filetype off                  " required
+filetype plugin indent on
+
 
 set showmatch
 filetype plugin indent on    " required
@@ -115,8 +120,8 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
-map <silent><space> <ESC>:NERDTreeToggle<CR>
-imap <silent><space> <ESC>:NERDTreeToggle<CR>
+nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
+" imap <silent><ENTER> <ESC>:NERDTreeToggle<CR>
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> \ :Buffers<CR>
@@ -234,16 +239,13 @@ nmap <leader>B ysiBBysaB`a$<ESC>
  imap <C-j> <C-g>j
  imap <C-k> <C-g>k
  imap <C-l> <Right>
+
+map  ff <Plug>(easymotion-bd-f)
+nmap ff <Plug>(easymotion-overwin-f)
 nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>a <Plug>BookmarkShowAll
 
-map  tt <Plug>(easymotion-bd-f)
-nmap tt <Plug>(easymotion-overwin-f)
-
 nmap <F8> :TagbarToggle<CR>
-iab cotns const
-iab conts const
-iab consts const
 set signcolumn=yes
 nmap ]h <Plug>(GitGutterNextHunk) "same as default
 nmap [h <Plug>(GitGutterPrevHunk) "same as default
@@ -267,6 +269,7 @@ let g:bookmark_no_default_key_mappings = 1
 ""let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 
 nmap <Leader>s :Startify<CR>
+let g:EasyMotion_do_mapping = 0
 
 
 "yank to clibboard window용
