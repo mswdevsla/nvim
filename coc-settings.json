@@ -20,7 +20,8 @@
     "css",
     "scss",
     "html",
-    "ruby"
+    "ruby",
+    "elixir"
   ],
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
