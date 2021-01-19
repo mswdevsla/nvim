@@ -122,8 +122,8 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-nnoremap <silent><ENTER> <ESC>:NERDTreeToggle<CR>
-imap <silent><ENTER> <ESC>:NERDTreeToggle<CR>
+nnoremap <Leader><ENTER> <ESC>:NERDTreeToggle<CR>
+imap <Leader><ENTER> <ESC>:NERDTreeToggle<CR>
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> \ :Buffers<CR>
