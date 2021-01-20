@@ -20,8 +20,10 @@
     "css",
     "scss",
     "html",
-    "ruby"
+    "ruby",
+    "yaml"
   ],
+  "yaml.format.enable": true,
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
   "diagnostic.warningSign": "•",
