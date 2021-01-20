@@ -21,7 +21,8 @@
     "scss",
     "html",
     "ruby",
-    "yaml"
+    "yaml",
+    "elixir"
   ],
   "yaml.format.enable": true,
   "tsserver.formatOnType": true,

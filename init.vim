@@ -2,7 +2,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree' " 폴더 구조 보여줌 그냥 필수
 Plug 'tpope/vim-surround' " 텍스트 감싸서 처리 할 수 있음 abc -> ysiw' -> 'abc'
 Plug 'tpope/vim-commentary' " gc로 주석처리
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc 설치
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
+
 Plug 'mattn/emmet-vim' " html 태그 만들어 줌 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf 사용
 Plug 'junegunn/fzf.vim'
@@ -63,7 +64,7 @@ colorscheme gruvbox
 " export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 
-let mapleader=","
+let mapleader=" "
 
 let g:user_emmet_leader_key='<C-Z>'
 set autoindent
@@ -126,8 +127,9 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
-nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-" imap <silent><ENTER> <ESC>:NERDTreeToggle<CR>
+" nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
+nnoremap <Leader><ENTER> <ESC>:NERDTreeToggle<CR>
+imap <Leader><ENTER> <ESC>:NERDTreeToggle<CR>
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> \ :Buffers<CR>
@@ -228,19 +230,18 @@ augroup mygroup
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
-xmap <leader><space>  <Plug>(coc-codeaction-selected)
-nmap <leader><space>  <Plug>(coc-codeaction-selected)
-nmap <silent><leader><space>c <Plug>(coc-codelens-action)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <silent><leader><space>c <Plug>(coc-codelens-action)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 nmap <TAB><TAB> a<TAB>
-nmap <TAB>p ea<space><ESC>p
-map <TAB>P bPa<space><ESC>
 nmap <F9> :Git status<CR>
 nmap <F10> :Gdiffsplit<CR>
 nmap <F11> :Git add %:p<CR>
 
-nmap <leader>B ysiBBysaB`a$<ESC>
+" nmap <leader>B ysiBBysaB`a$<ESC>
  imap <C-h> <C-o>h
  imap <C-j> <C-g>j
  imap <C-k> <C-g>k
@@ -249,7 +250,8 @@ nmap <leader>B ysiBBysaB`a$<ESC>
 map  ff <Plug>(easymotion-bd-f)
 nmap ff <Plug>(easymotion-overwin-f)
 nmap <Leader><Leader> <Plug>BookmarkToggle
-nmap <Leader>a <Plug>BookmarkShowAll
+nmap <Leader>b <Plug>BookmarkShowAll
+nmap <Leader>x <Plug>BookmarkClearAll
 
 nmap <F8> :TagbarToggle<CR>
 set signcolumn=yes
