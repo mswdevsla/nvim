@@ -128,8 +128,8 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-nnoremap <Leader><ENTER> <ESC>:NERDTreeToggle<CR>
-imap <Leader><ENTER> <ESC>:NERDTreeToggle<CR>
+nnoremap <C-n> <ESC>:NERDTreeToggle<CR>
+imap <C-n> <ESC>:NERDTreeToggle<CR>
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> \ :Buffers<CR>
@@ -247,8 +247,8 @@ nmap <F11> :Git add %:p<CR>
  imap <C-k> <C-g>k
  imap <C-l> <Right>
 
-map  ff <Plug>(easymotion-bd-f)
-nmap ff <Plug>(easymotion-overwin-f)
+map  <C-s> <Plug>(easymotion-bd-f)
+nmap <C-s> <Plug>(easymotion-overwin-f)
 nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>b <Plug>BookmarkShowAll
 nmap <Leader>x <Plug>BookmarkClearAll
@@ -276,7 +276,7 @@ let g:bookmark_no_default_key_mappings = 1
 "let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
 ""let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 
-nmap <Leader>s :Startify<CR>
+" nmap <Leader>s :Startify<CR>
 let g:EasyMotion_do_mapping = 0
 
 
