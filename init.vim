@@ -137,8 +137,8 @@ nnoremap <silent> \ :Buffers<CR>
 nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <silent> <F3> :<C-u>CocList diagnostics<cr>
 nnoremap <Leader>3 :b#<CR>      " previous buffer
-nnoremap <Leader>n :bn<CR>      " next buffer
-nnoremap <Leader>b :bp<CR>      " 이전 buffer
+nnoremap <Leader>4 :bn<CR>      " next buffer
+nnoremap <Leader>2 :bp<CR>      " 이전 buffer
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
