@@ -35,6 +35,10 @@ Plug 'kjwon15/vim-transparent'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins'  }
+Plug 'SirVer/ultisnips'
+Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 call plug#end()
 "source $HOME/.config/nvim/plug-config/coc.vim
 let g:coc_global_extensions =[
@@ -56,7 +60,8 @@ let g:coc_global_extensions =[
 \'coc-fzf-preview',
 \'coc-ultisnips',
 \'coc-elixir',
-\'coc-neosnippet']
+\'coc-neosnippet',
+\'coc-tailwindcss']
 
 colorscheme gruvbox
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
@@ -122,7 +127,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <Leader>w :w<CR>
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <Leader>s :w<CR>
 nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
@@ -157,11 +163,29 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" 자동완성창 열렸을 때 C-j 키를 어떻게 쓸것인가!
+" inoremap <silent><expr> <C-j>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<C-j>" :
+"       \ coc#refresh()
+
+
+" unmap <C-h>
+
+imap <C-j> <C-g>j
+imap <C-k> <C-g>k
+imap <C-l> <Right>
+imap <C-h> <C-o>h
+
+imap <silent><expr> <C-j>
+			\ pumvisible() ? "\<C-n>" : "\<C-g>j"
+
+" 자동완성창 열렸을 때 C-k 키를 어떻게 쓸것인가!
+imap <silent><expr> <C-k>
+			\ pumvisible() ? "\<C-p>" : "\<C-g>k"
+
+" inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-g>k"
 
 if exists('*complete_info')
   inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -242,13 +266,15 @@ nmap <F10> :Gdiffsplit<CR>
 nmap <F11> :Git add %:p<CR>
 
 " nmap <leader>B ysiBBysaB`a$<ESC>
- imap <C-h> <C-o>h
- imap <C-j> <C-g>j
- imap <C-k> <C-g>k
- imap <C-l> <Right>
 
 map  <C-s> <Plug>(easymotion-bd-f)
 nmap <C-s> <Plug>(easymotion-overwin-f)
+
+" " Move to Line
+" map <Leader>l <Plug>(easymotion-bd-jk)
+" nmap <Leader>l <Plug>(easymotion-overwin-line)
+
+
 nmap <Leader><Leader> <Plug>BookmarkToggle
 nmap <Leader>b <Plug>BookmarkShowAll
 nmap <Leader>x <Plug>BookmarkClearAll
@@ -288,5 +314,14 @@ if executable(s:clip)
 			autocmd TextYankPost * call system('echo '.shellescape(join(v:event.regcontents, "\<CR>")).' | '.s:clip)
 		augroup END
 end
+
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
+" let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
+let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+
 
 

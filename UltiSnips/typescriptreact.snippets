@@ -1,0 +1,48 @@
+snippet reactcomponent
+import React  from 'react';
+import tw from 'twin.macro';
+
+const ${1:`!p snip.rv = snip.basename`}Block = tw.div`
+`;
+
+
+function $1() {
+    return (
+        <>
+        </>
+    );
+}
+
+
+export default $1;
+endsnippet
+
+snippet reactcontainer
+import React  from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store';
+
+const ${1:`!p snip.rv = snip.basename`}:React.FC<> = () => {
+    const { } = useSelector((rootState: RootState) => rootState);
+    const dispatch = useDispatch();
+    return (
+        <>
+        </>
+    );
+}
+export default $1;
+endsnippet
+
+snippet fncomp
+const ${1:prop}: React.FC<${2:prop2}> = ({${3:prop3}}) => {
+    return (
+        <>
+        </>
+    );
+};
+endsnippet
+
+snippet picktype
+Pick<${1:prop},'${2:obj}'>
+endsnippet
+

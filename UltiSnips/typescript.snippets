@@ -1,0 +1,74 @@
+snippet reduxstore
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { ActionsObservable, combineEpics, StateObservable } from 'redux-observable';
+import { filter, map, switchMap, tap } from 'rxjs/operators';
+import { RootState } from 'store';
+
+
+export interface ${1:`!p snip.rv = snip.basename`}State {
+}
+
+
+const initialState: $1State = {
+};
+
+const $1Slice = createSlice({
+    name: '$1',
+    initialState,
+    reducers: {
+    },
+});
+
+export const $1SliceAction = $1Slice.actions;
+
+
+//const Epic = (
+//    action$: ActionsObservable<typeof $1Action.>,
+//    state$: StateObservable<RootState>,
+//) =>
+//    action$.pipe(
+//    	 filter($1Action.clickStatCategoryDetail$.match),
+//        switchMap((action) => {
+//            return get$<StaticsType[]>('/statistics');
+//        }),
+//        map(staticSlickAction.setStatCategoryDevice),
+//    );
+
+
+export const $1Epic = combineEpics();
+
+export default $1Slice.reducer;
+endsnippet
+
+
+
+snippet createEpic
+const ${1:prop}Epic = (
+    action$: ActionsObservable<typeof >,
+    state$: StateObservable<RootState>,
+) =>
+    action$.pipe(
+    	 filter(),
+        switchMap((action) => {
+            //return get$<StaticsType[]>('/statistics');
+        }),
+        map(),
+    );
+endsnippet
+
+snippet createReducer
+        ${1:prop}(state, action: PayloadAction<>) {
+        },
+endsnippet
+
+
+
+snippet ramdajs
+import $1 from 'ramda/src/${1:prop}';
+endsnippet
+
+
+
+snippet picktype
+Pick<${1:prop},'${2:obj}'>
+endsnippet

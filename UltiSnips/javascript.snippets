@@ -16,3 +16,10 @@ endsnippet`')`
 snippet "<([^\s].*)" "tag <...></...>" r
 `!p snip.rv='<'+match.group(1)+'>'+'</'+match.group(1)+'>'`$0
 endsnippet
+
+
+snippet fori
+for (var ${1:prop} in ${2:object}) {
+	 ${0:$2[$1]}
+}
+endsnippet

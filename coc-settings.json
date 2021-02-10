@@ -24,6 +24,25 @@
     "yaml",
     "elixir"
   ],
+  "tailwindCSS.jsLanguages": [
+    "javascript",
+    "javascriptreact",
+    "reason",
+    "typescriptreact"
+  ],
+  "tailwindCSS.cssLanguages": [
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "stylus",
+    "vue"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "tailwindCSS.trace.server": "verbose",
   "yaml.format.enable": true,
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
