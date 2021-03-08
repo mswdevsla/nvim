@@ -197,7 +197,11 @@ endif
 
 "coc-lists(word grep)
 " grep word under cursor
-command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
+" command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
+command! -bang -nargs=* Rg
+			\ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0) 
 
 function! s:GrepArgs(...)
   let list = ['-S', '-smartcase', '-i', '-ignorecase', '-w', '-word',
@@ -206,7 +210,8 @@ function! s:GrepArgs(...)
 endfunction
 
 " Keymapping for grep word under cursor with interactive mode
-nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+" nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <Leader>cf :Rg<CR>
 "buffer 에서 검색
 " nnoremap <silent> <space>cf :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
