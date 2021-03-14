@@ -3,7 +3,6 @@ Plug 'scrooloose/nerdtree' " 폴더 구조 보여줌 그냥 필수
 Plug 'tpope/vim-surround' " 텍스트 감싸서 처리 할 수 있음 abc -> ysiw' -> 'abc'
 Plug 'tpope/vim-commentary' " gc로 주석처리
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() } }
-
 Plug 'mattn/emmet-vim' " html 태그 만들어 줌 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " fzf 사용
 Plug 'junegunn/fzf.vim'
@@ -122,6 +121,8 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 set backspace=indent,eol,start
 
 
+
+nnoremap <silent> <leader>co  :<C-u>CocList outline<CR>
 nnoremap <Leader>rc :rightbelow vnew ~/.config/nvim/init.vim<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j

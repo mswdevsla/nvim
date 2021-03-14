@@ -42,6 +42,7 @@
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
   },
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "tailwindCSS.trace.server": "verbose",
   "yaml.format.enable": true,
   "tsserver.formatOnType": true,
