@@ -20,6 +20,7 @@ Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox' " 인텔리제이 색
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'tpope/vim-rails'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
@@ -122,7 +123,7 @@ set backspace=indent,eol,start
 
 
 
-nnoremap <silent> <leader>co  :<C-u>CocList outline<CR>
+nnoremap <silent> <leader>co  :<C-u>CocFzfList outline<CR>
 nnoremap <Leader>rc :rightbelow vnew ~/.config/nvim/init.vim<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
