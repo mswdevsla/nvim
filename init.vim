@@ -39,9 +39,8 @@ Plug 'mhinz/vim-mix-format'
 Plug 'SirVer/ultisnips'
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-Plug 'slashmili/alchemist.vim'
-
-" Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+Plug 'slashmili/alchemist.vim'  " elixir 임 지금은 coc 보다 이게나음
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 call plug#end()
 "source $HOME/.config/nvim/plug-config/coc.vim
 let g:coc_global_extensions =[
