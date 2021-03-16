@@ -23,7 +23,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 Plug 'tpope/vim-rails'
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
 Plug 'kana/vim-textobj-user'
 Plug 'mattn/vim-textobj-url'
 Plug 'kana/vim-textobj-entire'
@@ -34,10 +34,13 @@ Plug 'majutsushi/tagbar'
 Plug 'kjwon15/vim-transparent'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
-Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins'  }
+Plug 'mhinz/vim-mix-format'
+" Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins'  }
 Plug 'SirVer/ultisnips'
 Plug 'iamcco/coc-tailwindcss',  {'do': 'yarn install --frozen-lockfile && yarn run build'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'slashmili/alchemist.vim'
+
 " Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 call plug#end()
 "source $HOME/.config/nvim/plug-config/coc.vim
@@ -59,8 +62,8 @@ let g:coc_global_extensions =[
 \'coc-angular',
 \'coc-fzf-preview',
 \'coc-ultisnips',
-\'coc-elixir',
 \'coc-neosnippet',
+\'coc-elixir',
 \'coc-tailwindcss']
 
 colorscheme gruvbox
@@ -72,6 +75,7 @@ colorscheme gruvbox
 let mapleader=" "
 
 let g:user_emmet_leader_key='<C-Z>'
+set viminfo='1000
 set autoindent
 set nopaste
 set cindent
@@ -123,7 +127,8 @@ set backspace=indent,eol,start
 
 
 
-nnoremap <silent> <leader>co  :<C-u>CocFzfList outline<CR>
+
+nnoremap <silent> <Leader>co  :<C-u>CocList outline<CR>
 nnoremap <Leader>rc :rightbelow vnew ~/.config/nvim/init.vim<CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -213,7 +218,7 @@ endfunction
 
 " Keymapping for grep word under cursor with interactive mode
 " nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
-nnoremap <silent> <Leader>cf :Rg<CR>
+nnoremap <silent> <Leader>cf :Rg ./<CR>
 "buffer 에서 검색
 " nnoremap <silent> <space>cf :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
@@ -329,6 +334,17 @@ let g:UltiSnipsEditSplit="vertical"
 " let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
 " let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips']
 let g:UltiSnipsSnippetDirectories = ['UltiSnips']
+" let g:fzf_preview_lines_command = 'cat'
+let g:fzf_preview_preview_key_bindings = 'ctrl-f:preview-page-down,ctrl-b:preview-page-up,?:toggle-preview'
+
+let g:mix_format_on_save = 1
+
+
+" let g:fzf_preview_preview_key_bindings = ''
+
+
+" let g:coc_fzf_preview = ''
+" let g:coc_fzf_opts = []
 
 
 

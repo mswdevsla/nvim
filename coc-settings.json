@@ -21,8 +21,7 @@
     "scss",
     "html",
     "ruby",
-    "yaml",
-    "elixir"
+    "yaml"
   ],
   "tailwindCSS.jsLanguages": [
     "javascript",
