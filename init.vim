@@ -217,7 +217,7 @@ endfunction
 
 " Keymapping for grep word under cursor with interactive mode
 " nnoremap <silent> <Leader>cf :exe 'CocList -I --input='.expand('<cword>').' grep'<CR>
-nnoremap <silent> <Leader>cf :Rg ./<CR>
+nnoremap <silent> <Leader>cf yiw:Rg <C-r>0<CR>
 "buffer 에서 검색
 " nnoremap <silent> <space>cf :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
@@ -335,6 +335,7 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['UltiSnips']
 " let g:fzf_preview_lines_command = 'cat'
 let g:fzf_preview_preview_key_bindings = 'ctrl-f:preview-page-down,ctrl-b:preview-page-up,?:toggle-preview'
+let g:fzf_preview_window = ['right', 'ctrl-/']
 
 let g:mix_format_on_save = 1
 
