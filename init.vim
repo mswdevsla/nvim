@@ -43,27 +43,6 @@ Plug 'slashmili/alchemist.vim'  " elixir 임 지금은 coc 보다 이게나음
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'vim-scripts/BufOnly.vim'
 call plug#end()
-let g:coc_global_extensions =[
-\'coc-css',
-\'coc-eslint',
-\'coc-json',
-\'coc-prettier',
-\'coc-python',
-\'coc-snippets',
-\'coc-tsserver',
-\'coc-vimlsp',
-\'coc-html', 
-\'coc-highlight',
-\'coc-lists',
-\'coc-flutter',
-\'coc-styled-components',
-\'coc-solargraph',
-\'coc-angular',
-\'coc-fzf-preview',
-\'coc-ultisnips',
-\'coc-neosnippet',
-\'coc-elixir',
-\'coc-tailwindcss']
 
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
 "뺌

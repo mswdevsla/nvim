@@ -1,4 +1,24 @@
-
+let g:coc_global_extensions =[
+\'coc-css',
+\'coc-eslint',
+\'coc-json',
+\'coc-prettier',
+\'coc-python',
+\'coc-snippets',
+\'coc-tsserver',
+\'coc-vimlsp',
+\'coc-html', 
+\'coc-highlight',
+\'coc-lists',
+\'coc-flutter',
+\'coc-styled-components',
+\'coc-solargraph',
+\'coc-angular',
+\'coc-fzf-preview',
+\'coc-ultisnips',
+\'coc-neosnippet',
+\'coc-elixir',
+\'coc-tailwindcss']
 "coc-lists(word grep)
 " grep word under cursor
 " command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
@@ -38,5 +58,8 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " nmap <silent><leader><space>c <Plug>(coc-codelens-action)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
+
+
+
 
 
