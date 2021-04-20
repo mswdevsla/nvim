@@ -5,7 +5,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>v <C-w>v<C-w>l
-nnoremap <Leader>s :w<CR>
+nnoremap <Leader><Leader> :w<CR>
 nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
