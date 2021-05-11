@@ -1,12 +1,8 @@
 snippet reactcomponent
 import React  from 'react';
-import tw from 'twin.macro';
-
-const ${1:`!p snip.rv = snip.basename`}Block = tw.div`
-`;
 
 
-function $1() {
+function ${1:`!p snip.rv = snip.basename`}() {
     return (
         <>
         </>
@@ -67,6 +63,10 @@ snippet reactmap
 endsnippet
 
 
+snippet record
+Record<string,${1:prop}>
+
+endsnippet
 
 
 
