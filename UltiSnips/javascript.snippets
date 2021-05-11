@@ -23,3 +23,29 @@ for (var ${1:prop} in ${2:object}) {
 	 ${0:$2[$1]}
 }
 endsnippet
+
+
+snippet reducer 
+import { createSlice } from "@reduxjs/toolkit";
+
+export const $1Slice = createSlice({
+  name: "movie",
+  initialState: {
+    count: 0,
+  },
+  reducers: {
+    increment: (state, action) => {
+      state.count = state.count + 1;
+    },
+    decrement: (state, action) => {
+      state.count = state.count - 1;
+    },
+  },
+});
+
+export const { increment, decrement } = $1Slice.actions;
+
+export default $1Slice.reducer;
+
+
+endsnippet
