@@ -1,0 +1,54 @@
+snippet  lv
+defmodule LiveViewStudioWeb.${1}Live do
+	use LiveViewStudioWeb, :live_view
+end
+endsnippet
+
+
+snippet  lc
+defmodule LiveViewStudioWeb.${1}Component do
+	use LiveViewStudioWeb, :live_component
+end
+endsnippet
+
+
+snippet mount
+def mount(_params, _session, socket) do
+	socket = assign(socket, ${1:key}: ${2:value})
+	{:ok, socket}
+end
+endsnippet
+
+
+snippet rend 
+def render(assigns) do
+	~L"""
+	${0}
+	"""
+end
+endsnippet
+
+
+snippet he
+def handle_event(${1:event}, _, socket) do
+	socket = assign(socket, ${2:key}: ${3:value})
+	{:noreply, socket}
+end
+endsnippet
+
+snippet hi
+def handle_info(${1:message}, socket) do
+	socket = assign(socket, ${2:key}: ${3:value})
+	{:noreply, socket}
+end
+endsnippet
+
+snippet hp
+def handle_params(params, _url, socket) do
+	{:noreply, socket}
+end
+endsnippet
+
+
+
+

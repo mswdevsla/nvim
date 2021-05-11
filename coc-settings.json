@@ -21,7 +21,9 @@
     "scss",
     "html",
     "ruby",
-    "yaml"
+    "yaml",
+    "ex",
+    "leex"
   ],
   "tailwindCSS.jsLanguages": [
     "javascript",
@@ -58,5 +60,9 @@
   "html.autoClosingTags": true,
   "solargraph.autoformat": true,
   "solargraph.formatting": true,
-  "solargraph.hover": true
+  "solargraph.hover": true,
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.dialyzerEnabled": true,
+  "elixirLS.signatureAfterComplete": false,
+  "elixirLS.fetchDeps": false
 }
