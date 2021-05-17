@@ -2,4 +2,3 @@ let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir
 let g:NERDTreeWinSize=60
 
 
-
