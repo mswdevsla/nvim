@@ -1,0 +1,86 @@
+snippet data
+	<datalist id="${1}">
+	  ${0}
+	</datalist>
+endsnippet
+
+
+snippet input 
+	<input type="text" name="${1}" value="${2}" placeholder="${3}" />
+endsnippet
+
+
+snippet hidden 
+	<input type="hidden" name="${1}" value="${2}" />
+endsnippet
+
+
+
+snippet checkbox 
+	<input type="checkbox" id="${1} "name="${2}" value="${3}" />
+endsnippet
+
+
+snippet et
+<%= $1 %>
+endsnippet
+
+
+snippet eend 
+			<% end %>$1
+endsnippet
+
+
+snippet efor 
+<%= for ${1:item} <- @$1s do %>
+  $2
+<% end %>
+endsnippet
+
+
+
+snippet efori 
+			<%= for ${1:item} <- @$1s do %>
+			  $2
+			<% end %>
+endsnippet
+
+
+
+snippet eif
+	<%= if $1 do %>
+	$2
+	<% end %>
+endsnippet
+
+
+snippet eife
+		<%= if $1 do %>
+		  $2
+		<% else %>
+		  $3
+		<% end %>
+endsnippet
+
+snippet eelse 
+<% else %>
+endsnippet
+
+
+snippet econd 
+			<%= cond do %>
+			  <% $1 -> %>
+			    $2
+			  <% true -> %>
+			    $3
+			<% end %>
+endsnippet
+
+
+snippet eunless 
+			<%= unless $1 do %>
+			  $2
+			<% end %>
+endsnippet
+
+
