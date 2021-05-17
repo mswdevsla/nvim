@@ -36,3 +36,5 @@ imap <C-j> <C-g>j
 imap <C-k> <C-g>k
 imap <C-l> <Right>
 imap <C-h> <C-o>h
+
+
