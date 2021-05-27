@@ -38,6 +38,7 @@ imap <C-l> <Right>
 imap <C-h> <C-o>h
 
 
+
 nmap <Up> <C-W>2+
 nmap <Down> <C-W>2-
 nmap <Left> <C-W>2<
