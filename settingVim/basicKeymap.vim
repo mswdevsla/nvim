@@ -10,6 +10,10 @@ nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
+inoremap jk <ESC>
+inoremap kj <ESC>
+
+nnoremap <Leader>p viwp
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
 nnoremap <C-n> <ESC>:NERDTreeToggle<CR>
 imap <C-n> <ESC>:NERDTreeToggle<CR>
