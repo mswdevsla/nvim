@@ -23,18 +23,6 @@ let g:coc_global_extensions =[
 "coc-lists(word grep)
 " grep word under cursor
 " command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
-command! -bang -nargs=* Rg
-			\ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0) 
-
-function! s:GrepArgs(...)
-  let list = ['-S', '-smartcase', '-i', '-ignorecase', '-w', '-word',
-        \ '-e', '-regex', '-u', '-skip-vcs-ignores', '-t', '-extension']
-  return join(list, "\n")
-endfunction
-
-nnoremap <silent> <Leader>cf yiw:Rg <C-r>0<CR>
 "coc-list end
 
 

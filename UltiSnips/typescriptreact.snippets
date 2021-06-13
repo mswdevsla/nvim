@@ -1,8 +1,8 @@
-snippet reactcomponent
+snippet reactinit
 import React  from 'react';
 
 
-function ${1:`!p snip.rv = snip.basename`}() {
+const ${1:`!p snip.rv = snip.basename`}= () => {
     return (
         <>
         </>
@@ -12,6 +12,39 @@ function ${1:`!p snip.rv = snip.basename`}() {
 
 export default $1;
 endsnippet
+
+snippet reactcomponent
+const ${1} = () => {
+	return <div></div>
+}
+endsnippet
+
+
+snippet classname
+className="${1}"
+endsnippet
+
+snippet voidfn
+() => void
+endsnippet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 snippet reactcontainer
 import React  from 'react';
