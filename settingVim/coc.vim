@@ -18,6 +18,7 @@ let g:coc_global_extensions =[
 \'coc-ultisnips',
 \'coc-neosnippet',
 \'coc-elixir',
+\'coc-python',
 \'coc-tailwindcss']
 "coc-lists(word grep)
 " grep word under cursor

@@ -13,6 +13,11 @@ nnoremap <Leader>ex :Vex<CR>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
 nnoremap <C-n> <ESC>:NERDTreeToggle<CR>
 imap <C-n> <ESC>:NERDTreeToggle<CR>
+imap jk <ESC>
+imap kj <ESC>
+
+
+
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 nnoremap <silent> \ :Buffers<CR>
