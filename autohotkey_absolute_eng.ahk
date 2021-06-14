@@ -25,6 +25,11 @@ $CapsLock::
         Send {Esc}
     return
  
+^[::
+    if(IME_CHECK("A"))
+        Send, {VK15}
+return
+
 ^Space::
     if(IME_CHECK("A"))
         Send, {VK15}
@@ -37,3 +42,7 @@ return
 
 
 
+LAlt & h::Send {Left}
+LAlt & j::Send {Down}
+LAlt & k::Send {Up}
+LAlt & l::Send {Right}
