@@ -28,6 +28,7 @@ $CapsLock::
 ^[::
     if(IME_CHECK("A"))
         Send, {VK15}
+        Send {Esc}
 return
 
 ^Space::
