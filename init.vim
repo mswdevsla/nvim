@@ -48,8 +48,7 @@ call plug#end()
 "뺌
 " export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
-"source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/settingVim/basicset.vim
+"source $HOME/.config/nvim/plug-config/coc.vim source $HOME/.config/nvim/settingVim/basicset.vim
 source $HOME/.config/nvim/settingVim/basicKeymap.vim
 source $HOME/.config/nvim/settingVim/autocomplete.vim
 source $HOME/.config/nvim/settingVim/coc.vim
@@ -62,10 +61,3 @@ source $HOME/.config/nvim/settingVim/windowset.vim
 source $HOME/.config/nvim/settingVim/nerdtree.vim
 source $HOME/.config/nvim/settingVim/easymotion.vim
 source $HOME/.config/nvim/settingVim/elixir.vim
-
-
-
-
-
-
-

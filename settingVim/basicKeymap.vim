@@ -47,6 +47,8 @@ imap <C-l> <Right>
 imap <C-h> <C-o>h
 nnoremap vA ggVG
 noremap <silent> <leader><cr> :noh<cr>
+nnoremap B ^
+nnoremap E $
 
 
 
