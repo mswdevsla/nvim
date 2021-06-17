@@ -17,6 +17,11 @@ nnoremap <Leader>p viwp
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
 nnoremap <C-n> <ESC>:NERDTreeToggle<CR>
 imap <C-n> <ESC>:NERDTreeToggle<CR>
+imap jk <ESC>
+imap kj <ESC>
+
+
+
 "start FZF 
 nnoremap <silent> <Leader>f :FZF<CR>
 "end FZF
@@ -40,6 +45,10 @@ imap <C-j> <C-g>j
 imap <C-k> <C-g>k
 imap <C-l> <Right>
 imap <C-h> <C-o>h
+nnoremap va ggVG
+noremap <silent> <leader><cr> :noh<cr>
+nnoremap B ^
+nnoremap E $
 
 
 
