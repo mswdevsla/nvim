@@ -1,7 +1,8 @@
 let mapleader=" "
 
+
 colorscheme gruvbox
-let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key=','
 set viminfo='1000
 set autoindent
 set nopaste

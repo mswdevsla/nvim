@@ -28,21 +28,50 @@ snippet voidfn
 () => void
 endsnippet
 
+snippet reactemotion
+import React from "react";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
+
+export interface `!p snip.rv = snip.basename`Props{
+
+
+}
+endsnippet
 
 
 
 
+snippet styledcom
+	
+const ${1} = styled.${2}
+
+endsnippet 
+
+snippet cmt
+/**
+	* ${1}
+*/
+endsnippet 
 
 
+snippet stories
+import React from "react";
+import { Story, Meta } from "@storybook/react";
 
 
+export default {
+  title: "",
+  component: ,
+} as Meta;
 
+const Template: Story<> = (args) => < {...args} />;
 
+export const Primary = Template.bind({});
+Primary.args = { label: "Primary ", size: "small" };
 
-
-
-
-
+endsnippet 
 
 
 
@@ -85,14 +114,12 @@ snippet fndescription
 endsnippet
 
 snippet reactmap
-
 {${1:prop}.map((${2:obj}) => {
 
 	return <div></div>
 		})
 
 		}
-
 endsnippet
 
 
