@@ -49,6 +49,8 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 
+let g:coc_filetype_map = { '*.mdx': 'mdx' }
+
 
 
 

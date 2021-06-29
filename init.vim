@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript' "tsx highlight
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jxnblk/vim-mdx-js'
 Plug 'dart-lang/dart-vim-plugin' "dart 코드 지원
 Plug 'mattesgroeger/vim-bookmarks'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }

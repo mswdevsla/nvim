@@ -52,7 +52,3 @@ nnoremap E $
 
 
 
-nmap <Up> <C-W>2+
-nmap <Down> <C-W>2-
-nmap <Left> <C-W>2<
-nmap <Right> <C-W>2>
