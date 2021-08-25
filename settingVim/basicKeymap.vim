@@ -1,22 +1,19 @@
 nnoremap <silent> <Leader>co  :<C-u>CocList outline<CR>
 nnoremap <Leader>rc :rightbelow vnew ~/.config/nvim/init.vim<CR>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <Left> <C-w>h
+nnoremap <Down> <C-w>j
+nnoremap <Up> <C-w>k
+nnoremap <Right> <C-w>l
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <Leader><Leader> :w<CR>
 nnoremap <Leader>d :bd<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>. :NERDTreeFind<CR>
 nnoremap <Leader>ex :Vex<CR>
 inoremap jk <ESC>
 inoremap kj <ESC>
 
 nnoremap <Leader>p viwp
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-nnoremap <C-n> <ESC>:NERDTreeToggle<CR>
-imap <C-n> <ESC>:NERDTreeToggle<CR>
 imap jk <ESC>
 imap kj <ESC>
 
@@ -40,7 +37,7 @@ nmap <leader>z  <Plug>(coc-fix-current)
 imap cll console.log(<Esc>==f(a
 nmap cll yiwocll<Esc>p 
 vmap cll yocll<Esc>p
-imap arwf ()=>{}<ESC>ciB<CR>
+imap arwf  () => {}<ESC>F(a
 imap <C-j> <C-g>j
 imap <C-k> <C-g>k
 imap <C-l> <Right>
