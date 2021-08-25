@@ -11,6 +11,9 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>ex :Vex<CR>
 inoremap jk <ESC>
 inoremap kj <ESC>
+inoremap <C-d> <BS>
+
+
 
 nnoremap <Leader>p viwp
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
