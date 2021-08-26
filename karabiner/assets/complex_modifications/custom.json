@@ -1,0 +1,25 @@
+{
+  "title": "ctrl + d to backSpace",
+  "rules": [
+    {
+      "description": "ctrl + d to backSpace",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["control"],
+              "optional": ["caps_lock", "option"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

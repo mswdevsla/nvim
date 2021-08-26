@@ -16,14 +16,14 @@
                 },
                 "rules": [
                     {
-                        "description": "Left ctrl + hjkl to arrow keys Vim",
+                        "description": "Change Command + h/j/k/l to Arrows",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_control"
+                                            "command"
                                         ],
                                         "optional": [
                                             "any"
@@ -42,7 +42,7 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_control"
+                                            "command"
                                         ],
                                         "optional": [
                                             "any"
@@ -61,7 +61,7 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_control"
+                                            "command"
                                         ],
                                         "optional": [
                                             "any"
@@ -80,7 +80,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_control"
+                                            "command"
                                         ],
                                         "optional": [
                                             "any"
@@ -90,31 +90,6 @@
                                 "to": [
                                     {
                                         "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "ctrl + d to backSpace",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "caps_lock",
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace"
                                     }
                                 ],
                                 "type": "basic"
@@ -252,6 +227,16 @@
             },
             "selected": true,
             "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "escape"
+                    },
+                    "to": [
+                        {
+                            "key_code": "f14"
+                        }
+                    ]
+                },
                 {
                     "from": {
                         "key_code": "right_command"
