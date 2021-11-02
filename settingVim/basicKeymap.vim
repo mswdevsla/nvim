@@ -13,9 +13,11 @@ inoremap jk <ESC>
 inoremap kj <ESC>
 inoremap <C-d> <BS>
 
+" nnoremap <Left> :vertical resize -2<CR>
+" nnoremap <Right> :vertical resize +2<CR>
 
 
-nnoremap <Leader>p viwp
+nnoremap <Leader>p ciw<C-r>0<Esc>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
 imap jk <ESC>
 imap kj <ESC>

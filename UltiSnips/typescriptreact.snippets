@@ -13,6 +13,24 @@ const ${1:`!p snip.rv = snip.basename`}= () => {
 export default $1;
 endsnippet
 
+
+snippet reactinitobservable
+import React  from 'react';
+import { useObserver } from 'mobx-react-lite';
+
+
+const ${1:`!p snip.rv = snip.basename`}= () => {
+	return useObserver(() =>{     
+	return (<div>
+			</div>)
+			});
+}
+
+
+export default $1;
+endsnippet
+
+
 snippet reactcomponent
 const ${1} = () => {
 	return <div></div>
@@ -132,4 +150,18 @@ endsnippet
 snippet <
 <${1:tag}>`!p snip.rv = '</'+t[1]+'>'`$0
 endsnippet
+
+
+snippet casestic
+      case '${1}':
+        setInfo(
+[],[]
+		);
+		break;
+endsnippet
+
+snippet exd
+export default 
+endsnippet
+
 

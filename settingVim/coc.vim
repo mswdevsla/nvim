@@ -47,6 +47,8 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " nmap <silent><leader><space>c <Plug>(coc-codelens-action)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
+nmap <silent>  gE <Plug>(coc-diagnostic-prev)
+nmap <silent> ge <Plug>(coc-diagnostic-next)
 
 
 let g:coc_filetype_map = { '*.mdx': 'mdx' }
