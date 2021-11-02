@@ -1,16 +1,17 @@
 snippet reactinit
-import React  from 'react';
+import styled from 'styled-components';
 
+const ${1:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
 
-const ${1:`!p snip.rv = snip.basename`}= () => {
+const ${2:`!p snip.rv = snip.basename`}= () => {
     return (
-        <>
-        </>
+        <${1:`!p snip.rv = snip.basename`}Container>
+        </${1:`!p snip.rv = snip.basename`}Container>
     );
 }
 
 
-export default $1;
+export default $2;
 endsnippet
 
 
