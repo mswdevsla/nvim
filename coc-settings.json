@@ -39,7 +39,6 @@
   "json.format.enable": true,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "tailwindCSS.trace.server": "verbose",
-  "yaml.format.enable": true,
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
   "diagnostic.warningSign": "•",
@@ -53,7 +52,6 @@
   "coc.preferences.colorSupport": false,
   "html.autoClosingTags": true,
   "elixirLS.suggestSpecs": false,
-  "elixirLS.dialyzerEnabled": true,
-  "elixirLS.signatureAfterComplete": false,
+  "elixirLS.dialyzerEnabled": false,
   "elixirLS.fetchDeps": false
 }

@@ -44,6 +44,7 @@ Plug 'slashmili/alchemist.vim'  " elixir 임 지금은 coc 보다 이게나음
 Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 call plug#end()
 
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
