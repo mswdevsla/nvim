@@ -16,7 +16,8 @@
     "ruby",
     "yaml",
     "ex",
-    "leex"
+    "leex",
+    "heex"
   ],
   "tailwindCSS.jsLanguages": [
     "javascript",
