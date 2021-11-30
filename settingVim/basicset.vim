@@ -20,7 +20,6 @@ set cursorline
 set hidden
 set nocompatible              " be iMproved, required 
 set noic
-" set clipboard=unnamed
 set noswapfile
 set clipboard=unnamedplus
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
