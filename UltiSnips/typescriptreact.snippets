@@ -165,4 +165,63 @@ snippet exd
 export default 
 endsnippet
 
+snippet usequ
+  const ${1:hook}data = use$1()
+
+
+
+  if ($1data.isLoading) {
+    return <div>Loading</div>;
+  }
+
+  if ($1data.error) {
+    return <div>Error</div>;
+  }
+
+
+
+  if ($1data.isSuccess) {
+    return <div>성공</div>;
+  }
+
+
+  return <></>;
+
+endsnippet
+
+
+snippet reactqueryinit
+import styled from 'styled-components';
+
+const ${4:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
+
+const ${2:`!p snip.rv = snip.basename`}= () => {
+
+  const ${3:`!p snip.rv = snip.basename`}data = use${1:hookName}
+
+  if ($3data.isLoading) {
+    return <div>Loading</div>;
+  }
+
+  if ($3data.error) {
+    return <div>Error</div>;
+  }
+
+
+  if ($3data.isSuccess) {
+
+    return (
+        <${5:`!p snip.rv = snip.basename`}Container>
+        </${5:`!p snip.rv = snip.basename`}Container>
+    );
+  }
+
+  return <></>;
+}
+
+
+export default $2;
+endsnippet
+
+
 

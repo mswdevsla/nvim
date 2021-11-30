@@ -16,23 +16,20 @@ inoremap <C-d> <BS>
 " nnoremap <Left> :vertical resize -2<CR>
 " nnoremap <Right> :vertical resize +2<CR>
 
-
 nnoremap <Leader>p ciw<C-r>0<Esc>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-imap jk <ESC>
-imap kj <ESC>
+imap jk <CR>
+imap kj <CR>
 
 
 
-"start FZF 
-nnoremap <silent> <Leader>f :FZF<CR>
-"end FZF
 nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <silent> <F3> :<C-u>CocList diagnostics<cr>
 nnoremap <Leader>3 :b#<CR>      " previous buffer
 nnoremap <Leader>4 :bn<CR>      " next buffer
 nnoremap <Leader>2 :bp<CR>      " 이전 buffer
 nnoremap <Leader>5 :Buffers<CR>
+nnoremap <Leader>6 :BufOnly<CR>
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> gd <Plug>(coc-definition)
@@ -42,6 +39,7 @@ nmap <leader>z  <Plug>(coc-fix-current)
 imap cll console.log(<Esc>==f(a
 nmap cll yiwocll<Esc>p 
 vmap cll yocll<Esc>p
+nmap cm a<<C-r>0/><ESC>Bea<Space>
 imap arwf  () => {}<ESC>F(a
 imap <C-j> <C-g>j
 imap <C-k> <C-g>k
@@ -51,6 +49,8 @@ nnoremap vA ggVG
 noremap <silent> <leader><cr> :noh<cr>
 nnoremap B ^
 nnoremap E $
+noremap <Leader>; :%s:::g<Left><Left><Left>
+noremap <Leader>' :%s:::gc<Left><Left><Left><Left>
 
 
 

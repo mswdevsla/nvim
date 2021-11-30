@@ -94,5 +94,50 @@ export default
 endsnippet
 
 
+snippet queryHook
+import { axiosGetInstance } from 'lib/api';
+import { useQuery } from 'react-query';
+
+const get${2:`!p snip.rv = snip.basename`} = async () => {
+  const { data } = await axiosGetInstance.get('').catch((error) => {
+      throw error.response.data;
+	    });
+
+  return data;
+};
+
+export default function ${2:`!p snip.rv = snip.basename`}() {
+  return useQuery('', get${2:`!p snip.rv = snip.basename`});
+}
+
+endsnippet
 
 
+snippet mutationHook
+import { axiosRackInstance } from 'lib/api';
+import { useMutation } from 'react-query';
+
+const ${1:`!p snip.rv = snip.basename`} = async () => {
+  const { data } = await axiosRackInstance.post('');
+  return data;
+};
+
+export default function ${2:`!p snip.rv = snip.basename`}() {
+
+  return useMutation($1, {
+    onSuccess: (data) => {
+      console.log('success', data);
+    },
+    onError: (error) => {
+      //인증 에러 처리
+      console.log('error');
+      // return '';
+    },
+    onMutate: (varialb) => {
+      // 로딩중
+      console.log(varialb, 'onMutate');
+    },
+  });
+}
+
+endsnippet
