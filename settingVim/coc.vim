@@ -49,6 +49,12 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 nmap <silent>  gE <Plug>(coc-diagnostic-prev)
 nmap <silent> ge <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>z  <Plug>(coc-fix-current)
 
 
 let g:coc_filetype_map = { '*.mdx': 'mdx' }

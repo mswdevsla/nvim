@@ -30,12 +30,6 @@ nnoremap <Leader>4 :bn<CR>      " next buffer
 nnoremap <Leader>2 :bp<CR>      " 이전 buffer
 nnoremap <Leader>5 :Buffers<CR>
 nnoremap <Leader>6 :BufOnly<CR>
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <leader>rn <Plug>(coc-rename)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gr <Plug>(coc-references)
-nmap <leader>z  <Plug>(coc-fix-current)
 imap cll console.log(<Esc>==f(a
 nmap cll yiwocll<Esc>p 
 vmap cll yocll<Esc>p
