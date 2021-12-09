@@ -66,3 +66,4 @@ source $HOME/.config/nvim/settingVim/easymotion.vim
 source $HOME/.config/nvim/settingVim/elixir.vim
 source $HOME/.config/nvim/settingVim/abbreviate.vim
 source $HOME/.config/nvim/settingVim/react.vim
+" source $HOME/.config/nvim/pack/github/start/copilot.vim
