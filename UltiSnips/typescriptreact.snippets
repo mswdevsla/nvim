@@ -1,4 +1,4 @@
-snippet reactinit
+snippet ri
 import styled from 'styled-components';
 
 const ${1:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
@@ -62,7 +62,7 @@ endsnippet
 
 
 
-snippet styledcom
+snippet sc
 	
 const ${1} = styled.${2}
 
@@ -132,7 +132,7 @@ snippet fndescription
 **/
 endsnippet
 
-snippet reactmap
+snippet rm
 {${1:prop}.map((${2:obj}) => {
 
 	return <div></div>
@@ -165,7 +165,7 @@ snippet exd
 export default 
 endsnippet
 
-snippet usequ
+snippet uq
   const ${1:hook}data = use$1()
 
 
@@ -190,7 +190,36 @@ snippet usequ
 endsnippet
 
 
-snippet reactqueryinit
+snippet um
+  const ${1:hook}data = use$1()
+
+
+  const onSubmit = (data: any) => {
+    $1data.mutate({});
+  };
+
+  if ($1data.isLoading) {
+    return <div>Loading</div>;
+  }
+
+  if ($1data.error) {
+    return <div>Error</div>;
+  }
+
+
+
+  if ($1data.isSuccess) {
+    return <div>성공</div>;
+  }
+
+
+  return <></>;
+
+endsnippet
+
+
+
+snippet rqi
 import styled from 'styled-components';
 
 const ${4:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
@@ -223,5 +252,94 @@ const ${2:`!p snip.rv = snip.basename`}= () => {
 export default $2;
 endsnippet
 
+
+
+snippet kendoGridAddbutton
+
+
+//맨위로 이동
+
+interface ButtonCommandCellProps extends GridCellProps {
+  clickEvent: (item: StatisticsPeriodResponseType) => void;
+}
+
+const ButtonCommandCell = ({ clickEvent, dataItem }: EditCommandCellProps) => {
+  return (
+    <td>
+      <button className="k-button k-primary" onClick={() => clickEvent(dataItem)}>
+        modified
+      </button>
+    </td>
+  );
+};
+
+
+const  ${1:eventName} = (item: StatisticsPeriodResponseType) => {
+    console.log(item);
+  };
+
+const CommandCell = (props: GridCellProps) => <ButtonCommandCell {...props} clickEvent={$1} />;
+
+endsnippet
+
+
+
+
+snippet kendoTitle
+
+import { Typography } from '@progress/kendo-react-common';
+
+<Typography.h2>{title}</Typography.h2>
+endsnippet
+
+snippet kendomodal
+
+import styled from 'styled-components';
+import { Dialog } from '@progress/kendo-react-dialogs';
+import { useSetRecoilState } from 'recoil';
+import { Button } from '@progress/kendo-react-buttons';
+
+
+
+const ${1:`!p snip.rv = snip.basename`} = () => {
+  const setmodalState = useSetRecoilState(modalState);
+
+
+
+  const closeModal = () => {
+    setmodalState(false);
+  };
+
+
+  return (
+    <Dialog title="register access Ip address" onClose={closeModal} width={400} height={300}>
+
+
+
+    </Dialog>
+  );
+};
+
+export default $;
+endsnippet
+
+
+snippet usetran
+	const {t} = useTranslation('translation');
+
+endsnippet
+
+snippet useformcontext
+  const {
+    control,
+    setError,
+    clearErrors,
+    getValues,
+    watch,
+    // setFocus,
+    formState: { errors },
+  } = useFormContext();
+
+endsnippet
 
 
