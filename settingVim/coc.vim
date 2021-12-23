@@ -25,6 +25,9 @@ let g:coc_global_extensions =[
 " command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
 "coc-list end
 
+set updatetime=300
+set nobackup
+set nowritebackup
 
 
 " ruby
@@ -55,6 +58,10 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>z  <Plug>(coc-fix-current)
+xmap if <Plug>(coc-funcobj-i)
+omap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap af <Plug>(coc-funcobj-a)
 
 
 let g:coc_filetype_map = { '*.mdx': 'mdx' }
