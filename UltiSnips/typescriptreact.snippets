@@ -335,7 +335,8 @@ endsnippet
 
 
 snippet usetran
-	const {t} = useTranslation('translation');
+	const {t} = useTranslation('translation',{keyPrefix:''});
+import { useTranslation } from 'react-i18next';
 
 endsnippet
 
