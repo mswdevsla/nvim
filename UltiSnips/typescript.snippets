@@ -100,7 +100,7 @@ import { useQuery } from 'react-query';
 
 const get${2:`!p snip.rv = snip.basename`} = async () => {
   const { data } = await axiosInstance.get('').catch((error) => {
-      throw error.response.data;
+      throw error;
 	    });
 
   return data;
@@ -119,7 +119,7 @@ import { useMutation } from 'react-query';
 
 const ${1:`!p snip.rv = snip.basename`} = async (reqData) => {
   const { data } = await axiosInstance.post('',reqData).catch((error) => {
-    throw error.response;
+    throw error;
   });
 ;
   return data;

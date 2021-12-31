@@ -254,6 +254,16 @@ endsnippet
 
 
 
+snippet src
+import { useSetRecoilState } from 'recoil';
+  const ${1} = useSetRecoilState(${2}); 
+endsnippet
+
+snippet rc
+import { useRecoilValue } from 'recoil';
+  const ${1} = useRecoilValue(${2}); 
+endsnippet
+
 snippet kendoGridAddbutton
 
 
@@ -325,7 +335,8 @@ endsnippet
 
 
 snippet usetran
-	const {t} = useTranslation('translation');
+	const {t} = useTranslation('translation',{keyPrefix:''});
+import { useTranslation } from 'react-i18next';
 
 endsnippet
 
@@ -341,5 +352,19 @@ snippet useformcontext
   } = useFormContext();
 
 endsnippet
+
+
+snippet ctl
+                <Controller
+                  name=""
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => {
+                    return (
+                    );
+                  }}
+                />
+endsnippet
+
 
 
