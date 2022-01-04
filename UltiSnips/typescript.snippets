@@ -98,7 +98,7 @@ snippet hq
 import { axiosInstance } from 'lib/api';
 import { useQuery } from 'react-query';
 
-const get${2:`!p snip.rv = snip.basename`} = async () => {
+const get${1:`!p snip.rv = snip.basename`} = async () => {
   const { data } = await axiosInstance.get('').catch((error) => {
       throw error;
 	    });
@@ -107,7 +107,7 @@ const get${2:`!p snip.rv = snip.basename`} = async () => {
 };
 
 export default function ${2:`!p snip.rv = snip.basename`}() {
-  return useQuery('', get${2:`!p snip.rv = snip.basename`});
+  return useQuery('', get$1);
 }
 
 endsnippet

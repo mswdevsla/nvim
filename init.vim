@@ -22,7 +22,7 @@ Plug 'morhetz/gruvbox' " 인텔리제이 색
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'easymotion/vim-easymotion'
 " Plug 'scrooloose/nerdcommenter'
 Plug 'kana/vim-textobj-user'
@@ -45,6 +45,8 @@ Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'eslint/eslint'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
@@ -65,5 +67,6 @@ source $HOME/.config/nvim/settingVim/nerdtree.vim
 source $HOME/.config/nvim/settingVim/easymotion.vim
 source $HOME/.config/nvim/settingVim/elixir.vim
 source $HOME/.config/nvim/settingVim/abbreviate.vim
+source $HOME/.config/nvim/settingVim/commentary.vim
 source $HOME/.config/nvim/settingVim/react.vim
 " source $HOME/.config/nvim/pack/github/start/copilot.vim

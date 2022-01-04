@@ -36,10 +36,6 @@ set signcolumn=yes
 
 
 syntax on
-"start autocmd 
-" autocmd FileType javascript set commentstring=//\ %s
-" autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
-autocmd FileType javascript,javascriptreact,typescript,typescriptreact setlocal commentstring={/*\ %s\ */}
 
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
