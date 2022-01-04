@@ -53,6 +53,7 @@ call plug#end()
 "뺌
 " export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
+
 source $HOME/.config/nvim/settingVim/basicset.vim
 source $HOME/.config/nvim/settingVim/basicKeymap.vim
 source $HOME/.config/nvim/settingVim/autocomplete.vim
