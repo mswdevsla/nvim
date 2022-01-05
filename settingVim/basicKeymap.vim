@@ -30,7 +30,7 @@ nnoremap <Leader>4 :bn<CR>      " next buffer
 nnoremap <Leader>2 :bp<CR>      " 이전 buffer
 nnoremap <Leader>5 :Buffers<CR>
 nnoremap <Leader>6 :BufOnly<CR>
-imap cll console.log(<Esc>==f(a
+imap cll console.log(
 nmap cll yiwocll<Esc>p 
 vmap cll yocll<Esc>p
 nmap cm a<<C-r>0/><ESC>Bea<Space>
