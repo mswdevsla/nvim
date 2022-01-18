@@ -3,6 +3,7 @@
   "eslint.autoFixOnSave": true,
   "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnType": false,
+  "suggest.timeout": 1000,
   "coc.preferences.formatOnSaveFiletypes": [
     "dart",
     "javascript",
