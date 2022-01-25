@@ -17,6 +17,7 @@ nnoremap - :vertical resize -5<CR>
 nnoremap = :vertical resize +5<CR>
 
 nnoremap <Leader>p ciw<C-r>0<Esc>
+nnoremap <Leader>P viw"+p<Esc>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
 imap jk <CR>
 imap kj <CR>
@@ -47,4 +48,10 @@ noremap <Leader>; :%s:::g<Left><Left><Left>
 noremap <Leader>' :%s:::gc<Left><Left><Left><Left>
 
 
-
+nnoremap <silent><F2> 
+	\:botright new<CR><bar>
+	\:terminal<CR><bar><ESC>
+	\:resize 10<CR><bar>
+	\:set winfixheight<CR><bar>
+	\:set nonu<CR><bar>
+	\iLS_COLORS=$LS_COLORS:'di=1;33:ln=36'<CR>

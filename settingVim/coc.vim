@@ -34,7 +34,6 @@ set nowritebackup
 " let g:coc_global_extensions = ['coc-solargraph']
 
 " let g:coc_snippet_next = '<tab>'
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport') " import 할 때 필요 
 command! -nargs=0 OR :call CocAction('runCommand', 'tsserver.organizeImports')" import 할 떄 필요 
 augroup mygroup
@@ -62,6 +61,9 @@ xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap af <Plug>(coc-funcobj-a)
+
+
+
 
 
 let g:coc_filetype_map = { '*.mdx': 'mdx' }

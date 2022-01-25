@@ -45,8 +45,8 @@ Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'eslint/eslint'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 
 "fd 설치후 brew install fd -> ~/.zshrc에 추가해주면 gitifnore에 등록 된애들은
@@ -56,6 +56,7 @@ call plug#end()
 
 source $HOME/.config/nvim/settingVim/basicset.vim
 source $HOME/.config/nvim/settingVim/basicKeymap.vim
+source $HOME/.config/nvim/settingVim/terminal.vim
 source $HOME/.config/nvim/settingVim/autocomplete.vim
 source $HOME/.config/nvim/settingVim/coc.vim
 source $HOME/.config/nvim/settingVim/highlightset.vim
