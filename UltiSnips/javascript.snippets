@@ -58,6 +58,78 @@ it('', () => {
   expect().toBe();
 });
 
+endsnippet
+
+snippet us
+  const [text, setText] = useState('');
+
+endsnippet
+
+
+
+snippet uf
+  useEffect(() => {
+    console.log('')
+  }, []);
+
+endsnippet
+
+snippet exd
+  export default
+endsnippet
+
+
+snippet vw
+  <View>
+
+  </View>
+
+endsnippet
+
+
+snippet te
+  <Text>
+
+  </Text>
+
+endsnippet
+
+
+
+snippet rni
+
+import React  from 'react';
+import { View } from 'react-native';
+const ${2:`!p snip.rv = snip.basename`}= () => {
+    return (
+        <View>
+		{""}
+        </View>
+    );
+}
+
+
+export default $2;
+
+endsnippet
+
+
+
+snippet flist
+
+
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={[]}
+        numColumns={1}
+        renderItem={({item, index}) => (
+          <View>
+{""}
+
+		  </View>
+        )}
+        keyExtractor={(item, index) => index.toString()}
+      />
 
 
 endsnippet

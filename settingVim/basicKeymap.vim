@@ -1,8 +1,8 @@
 nnoremap <silent> <Leader>co  :<C-u>CocList outline<CR>
 nnoremap <Leader>rc :rightbelow vnew ~/.config/nvim/init.vim<CR>
 nnoremap <Left> <C-w>h
-nnoremap <Down> <C-w>j
-nnoremap <Up> <C-w>k
+" nnoremap <Down> <C-w>j
+" nnoremap <Up> <C-w>k
 nnoremap <Right> <C-w>l
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <Leader><Leader> :w<CR>
@@ -15,6 +15,8 @@ inoremap <C-d> <BS>
 
 nnoremap - :vertical resize -5<CR>
 nnoremap = :vertical resize +5<CR>
+nnoremap _ :resize -5<CR>
+nnoremap + :resize +5<CR>
 
 nnoremap <Leader>p ciw<C-r>0<Esc>
 nnoremap <Leader>P viw"+p<Esc>

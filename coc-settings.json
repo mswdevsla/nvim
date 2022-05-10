@@ -40,6 +40,9 @@
   },
   "json.format.enable": true,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.fetchDeps": false,
   "tailwindCSS.trace.server": "verbose",
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
@@ -51,9 +54,5 @@
   "tsserver.log": "verbose",
   "flutter.lsp.initialization.closingLabels": true,
   "flutter.provider.hot-reload": true,
-  "coc.preferences.colorSupport": false,
-  "html.autoClosingTags": true,
-  "elixirLS.suggestSpecs": false,
-  "elixirLS.dialyzerEnabled": false,
-  "elixirLS.fetchDeps": false
+  "html.autoClosingTags": true
 }
