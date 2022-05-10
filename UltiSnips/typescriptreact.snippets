@@ -12,6 +12,45 @@ const ${2:`!p snip.rv = snip.basename`}= () => {
 export default $2;
 endsnippet
 
+snippet cl
+className="${1}"
+endsnippet
+
+
+snippet us
+  const [list, setList] = useState();
+endsnippet
+
+
+
+snippet <
+<${1:tag}>`!p snip.rv = '</'+t[1]+'>'`$0
+endsnippet
+
+
+snippet fds
+/**
+@param ${1:prop} test
+
+@description
+**/
+endsnippet
+
+
+
+snippet rm
+{${1:prop}.map((${2:obj}) => {
+
+	return <div></div>
+		})
+
+		}
+endsnippet
+
+
+
+
+
 
 snippet reactinitobservable
 import React  from 'react';
@@ -30,16 +69,8 @@ export default $1;
 endsnippet
 
 
-snippet reactcomponent
-const ${1} = () => {
-	return <div></div>
-}
-endsnippet
 
 
-snippet classname
-className="${1}"
-endsnippet
 
 snippet voidfn
 () => void
@@ -122,22 +153,6 @@ Pick<${1:prop},'${2:obj}'>
 endsnippet
 
 
-snippet fndescription
-/**
-@param ${1:prop} 
-
-@description
-**/
-endsnippet
-
-snippet rm
-{${1:prop}.map((${2:obj}) => {
-
-	return <div></div>
-		})
-
-		}
-endsnippet
 
 
 snippet record
@@ -145,10 +160,6 @@ Record<string,${1:prop}>
 
 endsnippet
 
-
-snippet <
-<${1:tag}>`!p snip.rv = '</'+t[1]+'>'`$0
-endsnippet
 
 
 snippet casestic
@@ -167,23 +178,16 @@ snippet uq
   const ${1:hook}data = use$1()
 
 
-
-  if ($1data.isLoading) {
-    return <div>Loading</div>;
-  }
-
   if ($1data.error) {
     return <div>Error</div>;
   }
 
 
 
-  if ($1data.isSuccess) {
-    return <div>성공</div>;
-  }
-
-
-  return <></>;
+  return <>
+import OverlayLodaing from 'components/common/OverlayLodaing';
+        {$1data.isLoading && <OverlayLodaing />}
+  </>;
 
 endsnippet
 
@@ -226,24 +230,17 @@ const ${2:`!p snip.rv = snip.basename`}= () => {
 
   const ${3:`!p snip.rv = snip.basename`}data = use${1:hookName}
 
-  if ($3data.isLoading) {
-    return <div>Loading</div>;
-  }
 
   if ($3data.error) {
     return <div>Error</div>;
   }
 
-
-  if ($3data.isSuccess) {
-
     return (
         <${5:`!p snip.rv = snip.basename`}Container>
+        {$3data.isLoading && <OverlayLodaing />}
         </${5:`!p snip.rv = snip.basename`}Container>
     );
-  }
 
-  return <></>;
 }
 
 
@@ -257,10 +254,10 @@ import { useSetRecoilState } from 'recoil';
   const ${1} = useSetRecoilState(${2}); 
 endsnippet
 
-snippet rc
-import { useRecoilValue } from 'recoil';
-  const ${1} = useRecoilValue(${2}); 
-endsnippet
+# snippet rc
+# import { useRecoilValue } from 'recoil';
+#   const ${1} = useRecoilValue(${2}); 
+# endsnippet
 
 snippet kendoGridAddbutton
 
@@ -288,6 +285,57 @@ const  ${1:eventName} = (item: StatisticsPeriodResponseType) => {
 
 const CommandCell = (props: GridCellProps) => <ButtonCommandCell {...props} clickEvent={$1} />;
 
+endsnippet
+
+
+snippet kendogridinit
+
+import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
+import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
+
+const ${1:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
+const ${2:`!p snip.rv = snip.basename`}= () => {
+  const { t } = useTranslation('translation', { keyPrefix: 'system' });
+
+
+
+    return (
+        <${1:`!p snip.rv = snip.basename`}Container>
+      <Grid
+        style={{
+          overflow: 'auto',
+        }}
+        data={[]}
+      >
+        <Column field={'componentId'} title={t('ifctotal')} />
+        <Column field={'componentName'} title={t('connected')} />
+        <Column field={'componentId'} title={t('agwtotal')} />
+        <Column field={'componentName'} title={t('connected')} />
+      </Grid>
+        </${1:`!p snip.rv = snip.basename`}Container>
+    );
+}
+export default $2;
+endsnippet
+
+
+snippet kendogrid
+
+import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
+      <Grid
+        style={{
+          overflow: 'auto',
+        }}
+        data={[]}
+      >
+        <Column field={''} title={t('')} />
+        <Column field={''} title={t('')} />
+        <Column field={''} title={t('')} />
+        <Column field={''} title={t('')} />
+      </Grid>
+}
+export default $2;
 endsnippet
 
 
@@ -332,6 +380,76 @@ export default $;
 endsnippet
 
 
+snippet kendoform
+
+import styled from 'styled-components';
+import { Typography } from '@progress/kendo-react-common';
+import { Label } from '@progress/kendo-react-labels';
+import { NumericTextBox } from '@progress/kendo-react-inputs';
+import { CancelButton, ModifyButton, SaveButton } from 'components/common/button/ButtonGroup';
+
+
+const ${1:`!p snip.rv = snip.basename`}Container = styled.div\`;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40rem;
+\`;
+
+
+const InputContainer = styled.div\`
+  display: flex;
+  label {
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    width: 15rem;
+  }
+
+\`;
+const ButtonContainer = styled.div\`
+	margin-left:auto;
+\`;
+
+
+const ${2:`!p snip.rv = snip.basename`}= () => {
+    return (
+        <${1:`!p snip.rv = snip.basename`}Container>
+      <Typography.h2>루트 그룹 정보</Typography.h2>
+<InputContainer>
+              <Label editorId="cho"></Label>
+              <NumericTextBox id="cho" />
+              <ModifyButton onClick={handleModifyButton} />
+
+</InputContainer>
+
+          <ButtonContainer>
+            <SaveButton />
+            <CancelButton />
+          </ButtonContainer>
+        </${1:`!p snip.rv = snip.basename`}Container>
+    );
+}
+
+
+
+endsnippet
+
+
+snippet kendobutton
+
+import { Typography } from '@progress/kendo-react-common';
+import { CancelButton, ModifyButton, SaveButton } from 'components/common/button/ButtonGroup';
+const ButtonContainer = styled.div``;
+          <ButtonContainer>
+            <SaveButton />
+            <CancelButton />
+          </ButtonContainer>
+
+endsnippet
+
+
+
 snippet usetran
 	const {t} = useTranslation('translation',{keyPrefix:''});
 import { useTranslation } from 'react-i18next';
@@ -363,6 +481,68 @@ snippet ctl
                   }}
                 />
 endsnippet
+
+
+snippet uf
+
+import { object, string, number, ref } from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import FormTextError from 'components/common/error/FormTextError';
+
+const schema = object().shape({
+  domain: string().required('필수 값 입니다'),
+  smsGrpId: string().required('필수 값 입니다'),
+});
+
+
+  const {
+    control,
+    handleSubmit,
+    setValue,
+    setError,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+          <FormTextError error={get(errors, 'roldId')} />
+
+endsnippet
+
+
+
+
+snippet un
+
+import { useNormalAlert } from 'hooks/custom/useViewAlert';
+  const customAlert = useNormalAlert();
+      customAlert();
+
+
+endsnippet
+
+
+snippet uc
+
+import { useConfirmAlert } from 'hooks/custom/useViewAlert';
+  const customConfirm = useConfirmAlert();
+          if (await customConfirm()) {
+
+          }
+
+endsnippet
+
+
+
+snippet qc
+
+	const qc = useQueryClient()
+import { useQueryClient } from 'react-query';
+
+endsnippet
+
 
 
 

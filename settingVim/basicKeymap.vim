@@ -48,6 +48,10 @@ nnoremap B ^
 nnoremap E $
 noremap <Leader>; :%s:::g<Left><Left><Left>
 noremap <Leader>' :%s:::gc<Left><Left><Left><Left>
+nmap <Leader>s' ysiw'
+nmap <Leader>sb ysiwb
+nmap <Leader>sB ysiwB
+nmap <Leader>s[ ysiw[
 
 
 nnoremap <silent><F2> 

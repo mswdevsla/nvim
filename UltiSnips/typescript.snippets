@@ -116,6 +116,7 @@ endsnippet
 snippet hm
 import { axiosInstance } from 'lib/api';
 import { useMutation } from 'react-query';
+import { useMutation, useQueryClient } from 'react-query';
 
 const ${1:`!p snip.rv = snip.basename`} = async (reqData) => {
   const { data } = await axiosInstance.post('',reqData).catch((error) => {
@@ -127,22 +128,46 @@ const ${1:`!p snip.rv = snip.basename`} = async (reqData) => {
 
 export default function ${2:`!p snip.rv = snip.basename`}() {
   const qc = useQueryClient();
+  const customAlert = useNormalAlert();
 
   return useMutation($1, {
-    onSuccess: (data) => {
-qc.invalidateQueries()
-      console.log('success', data);
+    onSuccess: async (data) => {
+      await customAlert('성공 하였습니다'); //확인창 꺼지길 기다리고 닫아야함
+      qc.invalidateQueries();
     },
     onError: (error) => {
-      //인증 에러 처리
-      console.log('error');
-      // return '';
+      customAlert('실패 하였습니다');
     },
     onMutate: (varialb) => {
       // 로딩중
-      console.log(varialb, 'onMutate');
+      // console.log(varialb, 'onMutate');
     },
   });
 }
 
 endsnippet
+
+
+snippet un
+
+import { useNormalAlert } from 'hooks/custom/useViewAlert';
+  const customAlert = useNormalAlert();
+      customAlert();
+
+
+endsnippet
+
+
+snippet uc
+
+import { useConfirmAlert } from 'hooks/custom/useViewAlert';
+  const customConfirm = useConfirmAlert();
+          if (await customConfirm()) {
+
+          }
+
+
+
+endsnippet
+
+
