@@ -61,3 +61,8 @@ let s:denite_options = {'default' : {
 \ 'vertical_preview': 1
 \ }}
 let g:airline#extensions#tabline#enabled = 1
+" 단어 커서 표시
+" autocmd CursorMoved * exe printf('match ModeMsg /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+
+

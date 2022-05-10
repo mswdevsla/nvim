@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
+" Plug 'ludovicchabant/vim-gutentags' "Ctag
 Plug 'scrooloose/nerdtree' " 폴더 구조 보여줌 그냥 필수
 Plug 'tpope/vim-surround' " 텍스트 감싸서 처리 할 수 있음 abc -> ysiw' -> 'abc'
 Plug 'tpope/vim-commentary' " gc로 주석처리
@@ -30,7 +31,7 @@ Plug 'mattn/vim-textobj-url'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
 Plug 'thinca/vim-textobj-comment'
-Plug 'universal-ctags/ctags'
+" Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'kjwon15/vim-transparent'
 Plug 'elixir-editors/vim-elixir'
@@ -71,4 +72,5 @@ source $HOME/.config/nvim/settingVim/elixir.vim
 source $HOME/.config/nvim/settingVim/abbreviate.vim
 source $HOME/.config/nvim/settingVim/commentary.vim
 source $HOME/.config/nvim/settingVim/react.vim
+source $HOME/.config/nvim/settingVim/ctag.vim
 " source $HOME/.config/nvim/pack/github/start/copilot.vim

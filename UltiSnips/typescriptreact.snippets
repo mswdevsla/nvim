@@ -1,5 +1,5 @@
 snippet ri
-import styled from kk'styled-components';
+import styled from 'styled-components';
 
 const ${1:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
 
@@ -9,10 +9,47 @@ const ${2:`!p snip.rv = snip.basename`}= () => {
         </${1:`!p snip.rv = snip.basename`}Container>
     );
 }
-
-
 export default $2;
 endsnippet
+
+snippet cl
+className="${1}"
+endsnippet
+
+
+snippet us
+  const [list, setList] = useState();
+endsnippet
+
+
+
+snippet <
+<${1:tag}>`!p snip.rv = '</'+t[1]+'>'`$0
+endsnippet
+
+
+snippet fds
+/**
+@param ${1:prop} test
+
+@description
+**/
+endsnippet
+
+
+
+snippet rm
+{${1:prop}.map((${2:obj}) => {
+
+	return <div></div>
+		})
+
+		}
+endsnippet
+
+
+
+
 
 
 snippet reactinitobservable
@@ -32,16 +69,8 @@ export default $1;
 endsnippet
 
 
-snippet reactcomponent
-const ${1} = () => {
-	return <div></div>
-}
-endsnippet
 
 
-snippet classname
-className="${1}"
-endsnippet
 
 snippet voidfn
 () => void
@@ -124,22 +153,6 @@ Pick<${1:prop},'${2:obj}'>
 endsnippet
 
 
-snippet fndescription
-/**
-@param ${1:prop} 
-
-@description
-**/
-endsnippet
-
-snippet rm
-{${1:prop}.map((${2:obj}) => {
-
-	return <div></div>
-		})
-
-		}
-endsnippet
 
 
 snippet record
@@ -147,10 +160,6 @@ Record<string,${1:prop}>
 
 endsnippet
 
-
-snippet <
-<${1:tag}>`!p snip.rv = '</'+t[1]+'>'`$0
-endsnippet
 
 
 snippet casestic
@@ -169,23 +178,16 @@ snippet uq
   const ${1:hook}data = use$1()
 
 
-
-  if ($1data.isLoading) {
-    return <div>Loading</div>;
-  }
-
   if ($1data.error) {
     return <div>Error</div>;
   }
 
 
 
-  if ($1data.isSuccess) {
-    return <div>성공</div>;
-  }
-
-
-  return <></>;
+  return <>
+import OverlayLodaing from 'components/common/OverlayLodaing';
+        {$1data.isLoading && <OverlayLodaing />}
+  </>;
 
 endsnippet
 
@@ -228,24 +230,17 @@ const ${2:`!p snip.rv = snip.basename`}= () => {
 
   const ${3:`!p snip.rv = snip.basename`}data = use${1:hookName}
 
-  if ($3data.isLoading) {
-    return <div>Loading</div>;
-  }
 
   if ($3data.error) {
     return <div>Error</div>;
   }
 
-
-  if ($3data.isSuccess) {
-
     return (
         <${5:`!p snip.rv = snip.basename`}Container>
+        {$3data.isLoading && <OverlayLodaing />}
         </${5:`!p snip.rv = snip.basename`}Container>
     );
-  }
 
-  return <></>;
 }
 
 
@@ -259,10 +254,10 @@ import { useSetRecoilState } from 'recoil';
   const ${1} = useSetRecoilState(${2}); 
 endsnippet
 
-snippet rc
-import { useRecoilValue } from 'recoil';
-  const ${1} = useRecoilValue(${2}); 
-endsnippet
+# snippet rc
+# import { useRecoilValue } from 'recoil';
+#   const ${1} = useRecoilValue(${2}); 
+# endsnippet
 
 snippet kendoGridAddbutton
 
@@ -494,8 +489,6 @@ import { object, string, number, ref } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import FormTextError from 'components/common/error/FormTextError';
 
-
-
 const schema = object().shape({
   domain: string().required('필수 값 입니다'),
   smsGrpId: string().required('필수 값 입니다'),
@@ -539,9 +532,17 @@ import { useConfirmAlert } from 'hooks/custom/useViewAlert';
 
           }
 
+endsnippet
 
+
+
+snippet qc
+
+	const qc = useQueryClient()
+import { useQueryClient } from 'react-query';
 
 endsnippet
+
 
 
 
