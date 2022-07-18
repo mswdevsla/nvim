@@ -17,8 +17,7 @@ Plug 'dart-lang/dart-vim-plugin' "dart 코드 지원
 Plug 'mattesgroeger/vim-bookmarks'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-fugitive'
-Plug 'ap/vim-css-color'
-" Plug 'unblevable/quick-scope' " f 키로 이동할 포인트를 색으로 표시해줌
+Plug 'ap/vim-css-color' " Plug 'unblevable/quick-scope' " f 키로 이동할 포인트를 색으로 표시해줌
 Plug 'morhetz/gruvbox' " 인텔리제이 색
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'

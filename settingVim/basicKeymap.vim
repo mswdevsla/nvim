@@ -11,6 +11,9 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>ex :Vex<CR>
 inoremap jk <ESC>
 inoremap kj <ESC>
+" inoremap <C-e> <END>
+" inoremap <C-b> <HOME>
+inoremap kj <ESC>
 inoremap <C-d> <BS>
 
 nnoremap - :vertical resize -5<CR>
@@ -21,8 +24,8 @@ nnoremap + :resize +5<CR>
 nnoremap <Leader>p ciw<C-r>0<Esc>
 nnoremap <Leader>P viw"+p<Esc>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-imap jk <CR>
-imap kj <CR>
+" imap jk <CR>
+" imap kj <CR>
 
 
 
@@ -52,6 +55,11 @@ nmap <Leader>s' ysiw'
 nmap <Leader>sb ysiwb
 nmap <Leader>sB ysiwB
 nmap <Leader>s[ ysiw[
+
+
+nmap <Leader>t :vs t<Cr><C-w>rp
+
+
 
 
 nnoremap <silent><F2> 

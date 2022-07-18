@@ -1,7 +1,6 @@
 {
   "eslint.nodePath": "./node_modules",
   "eslint.autoFixOnSave": true,
-  "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnType": false,
   "suggest.timeout": 1000,
   "coc.preferences.formatOnSaveFiletypes": [
@@ -20,6 +19,7 @@
     "leex",
     "heex"
   ],
+  "javascript.preferences.importModuleSpecifier": "non-relative",
   "tailwindCSS.jsLanguages": [
     "javascript",
     "javascriptreact",
@@ -43,6 +43,8 @@
   "elixirLS.suggestSpecs": false,
   "elixirLS.dialyzerEnabled": false,
   "elixirLS.fetchDeps": false,
+  "elixirLS.mixEnv": "dev",
+  "elixirLS.mixTarget": "test",
   "tailwindCSS.trace.server": "verbose",
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",

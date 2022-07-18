@@ -142,4 +142,83 @@ snippet pa
 
 endsnippet
 
+snippet fl
+    {
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+    }
+endsnippet
+
+
+snippet mt
+marginTop:
+endsnippet
+
+
+
+snippet mb
+marginBottom:
+endsnippet
+
+
+snippet qh
+import { useQuery } from 'react-query';
+import apiInstance from "lib/api/api";
+import userKeys from "lib/querykeys/user";
+import { userapi } from "lib/api/user";
+import { apiRequest } from "lib/api/api";
+
+const get${1:`!p snip.rv = snip.basename`} = async (params) => {
+	const { data } = await apiRequest.get('',params);
+
+  return data;
+};
+
+export default function ${2:`!p snip.rv = snip.basename`}() {
+  return useQuery('', get$1);
+}
+
+endsnippet
+
+
+
+snippet mh
+import { useMutation, useQueryClient } from 'react-query';
+import { apiRequest } from "lib/api/api";
+
+const ${1:`!p snip.rv = snip.basename`} = async (reqData) => {
+  const { data } = await apiRequest.post('',reqData);
+;
+  return data;
+};
+
+export default function ${2:`!p snip.rv = snip.basename`}() {
+
+  return useMutation($1, {
+    onSuccess: async (data) => {
+    },
+    onError: (error) => {
+    },
+    onMutate: (varialb) => {
+      // 로딩중
+      // console.log(varialb, 'onMutate');
+    },
+  });
+}
+
+endsnippet
+
+
+snippet querykeys
+
+const MAINKEY = ["${1:`!p snip.rv = snip.basename`}"];
+
+const $1Keys = {
+  userList: [...MAINKEY, "$1List"],
+};
+
+export default $1Keys;
+
+endsnippet
 

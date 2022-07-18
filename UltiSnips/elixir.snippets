@@ -29,8 +29,17 @@ end
 endsnippet
 
 
-snippet he
-def handle_event(${1:event}, _, socket) do
+snippet hcst
+def handle_cast(${1:event}, _, socket) do
+	socket = assign(socket, ${2:key}: ${3:value})
+	{:noreply, socket}
+end
+endsnippet
+
+
+
+snippet hcal
+def handle_call(${1:event}, _, socket) do
 	socket = assign(socket, ${2:key}: ${3:value})
 	{:noreply, socket}
 end
