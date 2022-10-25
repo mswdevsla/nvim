@@ -99,17 +99,30 @@ endsnippet
 snippet rni
 
 import React  from 'react';
-import { View } from 'react-native';
+import { View,StyleSheet } from 'react-native';
 const ${2:`!p snip.rv = snip.basename`}= () => {
     return (
-        <View>
+        <View style={styles.container}>
 		{""}
         </View>
     );
 }
 
 
+const styles = StyleSheet.create({
+container:{
+flex:1
+
+}
+});
+
+
+
 export default $2;
+
+
+
+
 
 endsnippet
 
