@@ -1,0 +1,4 @@
+npm install -g typescript-language-server
+brew install tree-sitter
+brew install lua-language-server
+npm install -g @fsouza/prettierd
