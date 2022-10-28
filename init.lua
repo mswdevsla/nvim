@@ -4,6 +4,7 @@ require("jungho.core.highlights") -- lua/jungho/core/highlights
 require("jungho.core.keymaps") -- lua/jungho/core/maps
 require("jungho.core.colorscheme") -- lua/jungho/core/colorscheme
 
+require("jungho.plugins.cmp") -- lua/jungho/plugins/cmp
 require("jungho.plugins.autopairs") -- lua/jungho/plugins/autopairs
 require("jungho.plugins.bufferline") -- lua/jungho/plugins/bufferline require("jungho.plugins.cmp") -- jungho/plugins/cmp
 require("jungho.plugins.colorizer") -- lua/jungho/plugins/colorizer
