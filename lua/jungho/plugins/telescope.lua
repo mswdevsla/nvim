@@ -13,6 +13,19 @@ local fb_actions = require("telescope").extensions.file_browser.actions
 
 telescope.setup({
 	defaults = {
+		vimgrep_arguments = {
+			"rg",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+			"--ignore-file",
+			".gitignore",
+		},
+		file_ignore_patterns = { "node_modules", ".git" },
+
 		mappings = {
 			n = {
 				["q"] = actions.close,
