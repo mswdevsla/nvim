@@ -15,18 +15,25 @@ packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's built-in LSP
 	use("hrsh7th/nvim-cmp") -- Completion
 	use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-	use("tpope/vim-commentary")
-	use("tpope/vim-surround")
+	use("tpope/vim-fugitive")
+	-- use("tpope/vim-commentary")
+	-- use("tpope/vim-surround")
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+	use({
+		"kylechui/nvim-surround",
+		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
 	use("tpope/vim-repeat")
-	-- use({
-	-- 	"kylechui/nvim-surround",
-	-- 	tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-	-- 	config = function()
-	-- 		require("nvim-surround").setup({
-	-- 			-- Configuration here, or leave empty to use defaults
-	-- 		})
-	-- 	end,
-	-- })
 
 	-- colorscheme
 	-- use 'junegunn/seoul256.vim'

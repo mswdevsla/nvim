@@ -1,7 +1,7 @@
 require("jungho.plugins-setup") -- jungho/plugins-setup
 require("jungho.core.base") -- lua/jungho/core/base
 require("jungho.core.highlights") -- jungho/core/highlights
-require("jungho.core.maps") -- jungho/core/maps
+require("jungho.core.keymaps") -- jungho/core/maps
 require("jungho.core.colorscheme") -- jungho/core/colorscheme
 
 require("jungho.plugins.autopairs") -- jungho/plugins/autopairs
@@ -29,8 +29,12 @@ require("jungho.plugins.lualine") -- jungho/plugins/lualine
 require("jungho.plugins.nvim-tree") -- jungho/plugins/nvim-tree
 
 -- git
-require("jungho.plugins.git") -- jungho/plugins/lualine
+require("jungho.plugins.git") -- jungho/plugins/git
 require("jungho.plugins.gitsigns") -- jungho/plugins/lualine
+require("jungho.plugins.fugitive") -- jungho/plugins/fugitive
+
+require("jungho.plugins.comment") -- jungho/plugins/lualine
+require("jungho.plugins.surround") -- jungho/plugins/lualine
 
 -- require('jungho.plugins.neosolarized')
 require("jungho.plugins.packer_compiled") -- jungho/plugins/packer_compiled
