@@ -1,7 +1,7 @@
 local keymap = vim.keymap
 vim.g.mapleader = " "
+keymap.set("n", "<leader>rc", ":rightbelow vnew ~/.config/nvim/init.lua<cr>")
 
-keymap.set("n", "<leader>p", "ciw<C-r>0<Esc>")
 -- keymap.set('n', 'x', '"_x')
 
 -- Increment/decrement
@@ -39,3 +39,6 @@ keymap.set("n", "=", ":vertical resize +5<cr>")
 keymap.set("n", "<leader>3", ":b#<cr>")
 keymap.set("n", "<leader>2", ":bp<cr>")
 keymap.set("n", "<leader>5", ":bn<cr>")
+
+--복붙
+keymap.set("n", "<leader>p", "ciw<C-r>0<Esc>")
