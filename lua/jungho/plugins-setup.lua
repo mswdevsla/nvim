@@ -99,12 +99,16 @@ packer.startup(function(use)
 	use("MunifTanjim/prettier.nvim")
 
 	use("L3MON4D3/LuaSnip")
+
+	--treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+	use("nvim-treesitter/nvim-treesitter-textobjects")
+
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
 	use("windwp/nvim-autopairs")

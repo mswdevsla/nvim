@@ -1,7 +1,7 @@
 require("jungho.plugins-setup") -- lua/jungho/plugins-setup
 require("jungho.core.base") -- lua/jungho/core/base
 require("jungho.core.highlights") -- lua/jungho/core/highlights
-require("jungho.core.keymaps") -- lua/jungho/core/maps
+require("jungho.core.keymaps") -- lua/jungho/core/keymaps
 require("jungho.core.colorscheme") -- lua/jungho/core/colorscheme
 
 require("jungho.plugins.cmp") -- lua/jungho/plugins/cmp

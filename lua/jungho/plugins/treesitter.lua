@@ -1,9 +1,9 @@
-local status, ts = pcall(require, "nvim-treesitter.configs")
+local status, config = pcall(require, "nvim-treesitter.configs")
 if not status then
 	return
 end
 
-ts.setup({
+config.setup({
 	highlight = {
 		enable = true,
 		disable = {},
@@ -26,6 +26,37 @@ ts.setup({
 	},
 	autotag = {
 		enable = true,
+	},
+	textobjects = {
+		swap = {
+			enable = true,
+			swap_next = {
+				["<c-s>"] = "@parameter.inner",
+			},
+			-- swap_previous = {
+			-- 	["<c-a>"] = "@parameter.inner",
+			-- },
+		},
+
+		select = {
+			enable = true,
+
+			-- Automatically jump forward to textobj, similar to targets.vim
+			lookahead = true,
+
+			keymaps = {
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				["ac"] = "@class.outer",
+				["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+			},
+			selection_modes = {
+				["@parameter.outer"] = "v", -- charwise
+				["@function.outer"] = "V", -- linewise
+				["@class.outer"] = "<c-v>", -- blockwise
+			},
+			include_surrounding_whitespace = true,
+		},
 	},
 })
 
