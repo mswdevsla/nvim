@@ -1,5 +1,7 @@
 local status, null_ls = pcall(require, "null-ls")
-if (not status) then return end
+if not status then
+  return
+end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -14,15 +16,14 @@ end
 
 local formatting = null_ls.builtins.formatting
 
-
-null_ls.setup {
+null_ls.setup({
   sources = {
     formatting.prettier,
     formatting.stylua,
     null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
+      diagnostics_format = "[eslint] #{m}\n(#{c})",
     }),
-    null_ls.builtins.diagnostics.fish
+    null_ls.builtins.diagnostics.fish,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -35,13 +36,16 @@ null_ls.setup {
         end,
       })
     end
-  end
-}
-
-vim.api.nvim_create_user_command(
-  'DisableLspFormatting',
-  function()
-    vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
   end,
-  { nargs = 0 }
-)
+})
+--[[ null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.diagnostics.eslint,
+    null_ls.builtins.completion.spell,
+  },
+}) ]]
+
+vim.api.nvim_create_user_command("DisableLspFormatting", function()
+  vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
+end, { nargs = 0 })

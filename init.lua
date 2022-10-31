@@ -18,6 +18,7 @@ require("jungho.plugins.lspsaga") -- lua/jungho/plugins/lspsaga
 require("jungho.plugins.mason") -- lsp 다운로드 하는 -- lua/jungho/plugins/mason
 require("jungho.plugins.null-ls") -- lua/jungho/plugins/null-ls
 require("jungho.plugins.prettier") -- lua/jungho/plugins/prettier
+require("jungho.plugins.eslint") -- lua/jungho/plugins/prettier
 
 require("jungho.plugins.telescope") -- lua/jungho/plugins/telescope
 require("jungho.plugins.treesitter") -- lua/jungho/plugins/treesitter

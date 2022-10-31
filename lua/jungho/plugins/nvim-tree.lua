@@ -9,4 +9,6 @@ local keymap = vim.keymap
 keymap.set("n", "<leader>n", ":NvimTreeToggle<cr>")
 keymap.set("n", "<leader>.", ":NvimTreeFindFileToggle<cr>")
 
-nvimtree.setup()
+nvimtree.setup({ view = {
+	width = 50,
+} })

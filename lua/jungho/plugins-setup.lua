@@ -62,10 +62,12 @@ packer.startup(function(use)
 	-- use("tpope/vim-surround")
 	use({
 		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
+		-- config = function()
+		--   require("Comment").setup()
+		-- end,
 	})
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+
 	use({
 		"kylechui/nvim-surround",
 		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -97,7 +99,7 @@ packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("glepnir/lspsaga.nvim") -- LSP UIs
 	use("MunifTanjim/prettier.nvim")
-
+	use("MunifTanjim/eslint.nvim")
 	use("L3MON4D3/LuaSnip")
 
 	--treesitter

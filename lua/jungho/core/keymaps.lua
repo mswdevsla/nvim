@@ -38,8 +38,12 @@ keymap.set("n", "=", ":vertical resize +5<cr>")
 --buffer
 keymap.set("n", "<leader>3", ":b#<cr>")
 keymap.set("n", "<leader>2", ":bp<cr>")
-keymap.set("n", "<leader>5", ":bn<cr>")
-keymap.set("n", "<leader>bd", ":bd")
+keymap.set("n", "<leader>4", ":bn<cr>")
+keymap.set("n", "<leader>d", ":bd<cr>")
 
 --복붙
 keymap.set("n", "<leader>p", "ciw<C-r>0<Esc>")
+
+keymap.set("n", "cll", "yiwoconsole.log(<c-r>0)")
+keymap.set("i", "cll", "console.log()<left>")
+keymap.set("i", "arwf", "() => {}<ESC>F(a")
