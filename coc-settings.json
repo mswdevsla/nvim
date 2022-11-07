@@ -18,7 +18,8 @@
     "yaml",
     "ex",
     "leex",
-    "heex"
+    "heex",
+    "prisma"
   ],
   "tailwindCSS.jsLanguages": [
     "javascript",
@@ -51,7 +52,6 @@
   "tsserver.log": "verbose",
   "flutter.lsp.initialization.closingLabels": true,
   "flutter.provider.hot-reload": true,
-  "coc.preferences.colorSupport": false,
   "html.autoClosingTags": true,
   "elixirLS.suggestSpecs": false,
   "elixirLS.dialyzerEnabled": false,

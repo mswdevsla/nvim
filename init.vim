@@ -46,6 +46,8 @@ Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'eslint/eslint'
+Plug 'pantharshit00/vim-prisma'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 " Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
@@ -73,4 +75,5 @@ source $HOME/.config/nvim/settingVim/abbreviate.vim
 source $HOME/.config/nvim/settingVim/commentary.vim
 source $HOME/.config/nvim/settingVim/react.vim
 source $HOME/.config/nvim/settingVim/ctag.vim
+source $HOME/.config/nvim/settingVim/wiki.vim
 " source $HOME/.config/nvim/pack/github/start/copilot.vim
