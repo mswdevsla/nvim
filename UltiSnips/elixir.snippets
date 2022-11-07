@@ -29,8 +29,17 @@ end
 endsnippet
 
 
-snippet he
-def handle_event(${1:event}, _, socket) do
+snippet hcst
+def handle_cast(${1:event}, _, socket) do
+	socket = assign(socket, ${2:key}: ${3:value})
+	{:noreply, socket}
+end
+endsnippet
+
+
+
+snippet hcal
+def handle_call(${1:event}, _, socket) do
 	socket = assign(socket, ${2:key}: ${3:value})
 	{:noreply, socket}
 end
@@ -53,6 +62,24 @@ endsnippet
 snippet et
 <%= ${0} =>
 endsnippet
+
+
+snippet ug
+
+  use GenServer
+
+  def init(initial_number) do
+    {:ok, initial_number}
+  end
+
+  def handle_call(:next_number, _from, current_number) do
+    {:reply, current_number, current_number + 1}
+  end
+endsnippet
+
+
+
+
 
 
 

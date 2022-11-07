@@ -36,6 +36,7 @@ set signcolumn=yes
 
 
 syntax on
+filetype plugin indent on
 
 autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |

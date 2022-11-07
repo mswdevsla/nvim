@@ -1,8 +1,8 @@
 nnoremap <silent> <Leader>co  :<C-u>CocList outline<CR>
 nnoremap <Leader>rc :rightbelow vnew ~/.config/nvim/init.vim<CR>
 nnoremap <Left> <C-w>h
-nnoremap <Down> <C-w>j
-nnoremap <Up> <C-w>k
+" nnoremap <Down> <C-w>j
+" nnoremap <Up> <C-w>k
 nnoremap <Right> <C-w>l
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <Leader><Leader> :w<CR>
@@ -11,16 +11,21 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>ex :Vex<CR>
 inoremap jk <ESC>
 inoremap kj <ESC>
+" inoremap <C-e> <END>
+" inoremap <C-b> <HOME>
+inoremap kj <ESC>
 inoremap <C-d> <BS>
 
 nnoremap - :vertical resize -5<CR>
 nnoremap = :vertical resize +5<CR>
+nnoremap _ :resize -5<CR>
+nnoremap + :resize +5<CR>
 
 nnoremap <Leader>p ciw<C-r>0<Esc>
 nnoremap <Leader>P viw"+p<Esc>
 " nnoremap <silent><space> <ESC>:NERDTreeToggle<CR>
-imap jk <CR>
-imap kj <CR>
+" imap jk <CR>
+" imap kj <CR>
 
 
 
@@ -50,6 +55,11 @@ nmap <Leader>s' ysiw'
 nmap <Leader>sb ysiwb
 nmap <Leader>sB ysiwB
 nmap <Leader>s[ ysiw[
+
+
+nmap <Leader>t :vs t<Cr><C-w>rp
+
+
 
 
 nnoremap <silent><F2> 

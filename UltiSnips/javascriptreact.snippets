@@ -1,0 +1,619 @@
+snippet ri
+import styled from "@emotion/styled";
+
+const ${1:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
+
+const ${2:`!p snip.rv = snip.basename`}= () => {
+    return (
+        <${1:`!p snip.rv = snip.basename`}Container>
+        </${1:`!p snip.rv = snip.basename`}Container>
+    );
+}
+export default $2;
+endsnippet
+
+snippet cl
+className="${1}"
+endsnippet
+
+
+snippet us
+  const [list, setList] = useState();
+endsnippet
+
+
+
+snippet <
+<${1:tag}>`!p snip.rv = '</'+t[1]+'>'`$0
+endsnippet
+
+
+snippet fds
+/**
+@param ${1:prop} test
+
+@description
+**/
+endsnippet
+
+
+
+snippet rm
+{${1:prop}.map((${2:obj}) => {
+
+	return <div></div>
+		})
+
+		}
+endsnippet
+
+
+
+
+
+
+snippet reactinitobservable
+import React  from 'react';
+import { useObserver } from 'mobx-react-lite';
+
+
+const ${1:`!p snip.rv = snip.basename`}= () => {
+	return useObserver(() =>{     
+	return (<div>
+			</div>)
+			});
+}
+
+
+export default $1;
+endsnippet
+
+
+
+
+
+snippet voidfn
+() => void
+endsnippet
+
+snippet reactemotion
+import React from "react";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
+
+export interface `!p snip.rv = snip.basename`Props{
+
+
+}
+endsnippet
+
+
+
+
+snippet sc
+	
+const ${1} = styled.${2}
+
+endsnippet 
+
+
+
+snippet stories
+import React from "react";
+import { Story, Meta } from "@storybook/react";
+
+
+export default {
+  title: "",
+  component: ,
+} as Meta;
+
+const Template: Story<> = (args) => < {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = { label: "Primary ", size: "small" };
+
+endsnippet 
+
+
+
+snippet reactcontainer
+import React  from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store';
+
+const ${1:`!p snip.rv = snip.basename`}:React.FC<> = () => {
+    const { } = useSelector((rootState: RootState) => rootState);
+    const dispatch = useDispatch();
+    return (
+        <>
+        </>
+    );
+}
+export default $1;
+endsnippet
+
+snippet fncomp
+const ${1:prop}: React.FC<${2:prop2}> = ({${3:prop3}}) => {
+    return (
+        <>
+        </>
+    );
+};
+endsnippet
+
+snippet picktype
+Pick<${1:prop},'${2:obj}'>
+endsnippet
+
+
+
+
+snippet record
+Record<string,${1:prop}>
+
+endsnippet
+
+
+
+snippet casestic
+      case '${1}':
+        setInfo(
+[],[]
+		);
+		break;
+endsnippet
+
+snippet exd
+export default 
+endsnippet
+
+snippet uq
+  const ${1:hook}data = use$1()
+
+
+  if ($1data.error) {
+    return <div>Error</div>;
+  }
+
+
+
+  return <>
+import OverlayLodaing from 'components/common/OverlayLodaing';
+        {$1data.isLoading && <OverlayLodaing />}
+  </>;
+
+endsnippet
+
+
+snippet um
+  const ${1:hook}data = use$1()
+
+
+  const onSubmit = (data: any) => {
+    $1data.mutate({});
+  };
+
+  if ($1data.isLoading) {
+    return <div>Loading</div>;
+  }
+
+  if ($1data.error) {
+    return <div>Error</div>;
+  }
+
+
+
+  if ($1data.isSuccess) {
+    return <div>성공</div>;
+  }
+
+
+  return <></>;
+
+endsnippet
+
+
+snippet rqi
+import styled from '@emotion/styled';
+import { Link, useHistory, useParams } from "react-router-dom";
+
+const ${4:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
+
+const ${2:`!p snip.rv = snip.basename`}= () => {
+
+  const { id } = useParams();
+  const ${3:`!p snip.rv = snip.basename`}data = use${1:hookName}
+
+
+  if ($3data.error) {
+    return <div>Error</div>;
+  }
+
+  if ($3data.isSuccess) {
+
+    const data = get($3data, "data.result_data.", {});
+
+
+    return (
+        <${5:`!p snip.rv = snip.basename`}Container>
+        {$3data.isLoading && <OverlayLodaing />}
+        </${5:`!p snip.rv = snip.basename`}Container>
+    );
+}
+
+
+return <></>
+}
+
+
+export default $2;
+endsnippet
+
+
+
+snippet src
+import { useSetRecoilState } from 'recoil';
+  const ${1} = useSetRecoilState(${2}); 
+endsnippet
+
+
+
+
+
+
+
+
+
+snippet useformcontext
+  const {
+    control,
+    setError,
+    clearErrors,
+    getValues,
+    watch,
+    // setFocus,
+    formState: { errors },
+  } = useFormContext();
+
+endsnippet
+
+
+snippet ctl
+                <Controller
+                  name=""
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => {
+                    return (
+                    );
+                  }}
+                />
+endsnippet
+
+
+snippet uf
+import { object, string, number, ref } from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import FormTextError from 'components/common/error/FormTextError';
+const schema = object().shape({
+  domain: string().required('필수 값 입니다'),
+  smsGrpId: string().required('필수 값 입니다'),
+});
+
+
+  const {
+    control,
+    handleSubmit,
+    setValue,
+    setError,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+          <FormTextError error={get(errors, 'roldId')} />
+
+endsnippet
+
+
+
+
+
+
+
+
+snippet qc
+
+	const qc = useQueryClient()
+import { useQueryClient } from 'react-query';
+
+endsnippet
+
+
+
+
+snippet rqmug
+
+import styled from "@emotion/styled";
+import { DataGrid } from "@mui/x-data-grid";
+import Skeleton from "@material-ui/lab/Skeleton";
+
+
+
+const ${4:`!p snip.rv = snip.basename`}Container = styled.div\`\`;
+
+
+const rows = [
+  { id: 1, col1: "Hello", col2: "World" },
+  { id: 2, col1: "DataGridPro", col2: "is Awesome" },
+  { id: 3, col1: "Material-UI", col2: "is Amazing" },
+];
+
+
+const columns = [
+  { field: "col1", headerName: "Column 1", width: 150 },
+  { field: "col2", headerName: "Column 2", width: 150 },
+];
+
+
+const ${2:`!p snip.rv = snip.basename`}= () => {
+
+  const ${3:`!p snip.rv = snip.basename`}data = use${1:hookName}
+
+
+  if ($3data.error) {
+    return <div>Error</div>;
+  }
+
+
+
+
+    return (
+        <${5:`!p snip.rv = snip.basename`}Container>
+        {$3data.isLoading && <Skeleton variant="rect" width={"100%"} height={300} />}
+		<DataGrid rows={rows} columns={columns} />
+        </${5:`!p snip.rv = snip.basename`}Container>
+    );
+
+
+}
+
+export default $2;
+endsnippet
+
+
+
+
+snippet mug
+
+import styled from "@emotion/styled";
+import { DataGrid } from "@mui/x-data-grid";
+
+const columns = [
+  { field: "col1", headerName: "Column 1", width: 150 },
+  { field: "col2", headerName: "Column 2", width: 150 },
+];
+
+
+
+
+    <DataGrid rows={rows} columns={columns} />
+
+endsnippet
+
+
+
+
+snippet up
+	import { useParams } from "react-router-dom";
+  const { id } = useParams();
+
+
+endsnippet
+
+
+snippet up
+
+const ButtonCell = (params) => {
+  const history = useHistory();
+  const handleClick = () => {
+    const id = get(params, "row.id", 0);
+    history.push(`/user/${id}`);
+  
+
+  return <CustomButton onClick={handleClick}>상세</CustomButton>;
+};
+
+{
+    field: "test",
+    headerName: "상세",
+    renderCell: ButtonCell,
+  }
+endsnippet
+
+snippet cs
+
+import { NativeSelect, Input } from "@mui/material";
+ <Controller
+        name="select"
+        control={control}
+        render={({ field }) =>
+{
+return 	<NativeSelect defaultValue={30}>
+			<option value="email">이메일</option>
+			<option value="id">회원번호</option>
+		  </NativeSelect>
+}
+		}
+      />
+
+endsnippet
+
+
+
+snippet ci
+
+import { NativeSelect, Input } from "@mui/material";
+ <Controller
+        name="select"
+        control={control}
+        render={({ field }) =>
+{
+return 	<Input />
+}
+		}
+      />
+
+endsnippet
+
+
+snippet cd
+
+      <Controller
+        name="start_date"
+        control={control}
+        render={({ field }) => {
+          return (
+            <DatePicker
+              label="Start Date"
+              inputFormat="yyyy/MM/dd"
+              {...field}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          );
+        }}
+      />
+
+endsnippet
+
+
+
+snippet searchcondition
+
+import styled from "@emotion/styled";
+import { NativeSelect, Input } from "@mui/material";
+import TextField from "@mui/material/TextField";
+import DatePicker from "components/common/DatePicker";
+import { useForm, Controller, useFormContext } from "react-hook-form";
+import { dateformat, today, fewDayAgofromToday } from "lib/date";
+import userKeys from "lib/querykeys/user";
+import { useQueryClient } from "react-query";
+import CustomButton from "components/common/Button";
+
+const ${1:`!p snip.rv = snip.basename`}Container = styled.form`
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+`;
+
+const $1 = () => {
+  const { control, handleSubmit } = useFormContext();
+  const qc = useQueryClient();
+
+  const submit = async (data) => {
+    // qc.fetchQuery(userKeys.userList, () => {
+    //   return getUserlist({
+    //     limit: USERLIMIT,
+    //     offset: 0,
+    //     ...makeUserSearchCondition(data),
+    //   });
+    // });
+  };
+
+  return (
+    <$1Container onSubmit={handleSubmit(submit)}>
+      <Controller
+        name="start_date"
+        control={control}
+        defaultValue={fewDayAgofromToday(7)}
+        render={({ field }) => {
+          return (
+            <DatePicker
+              label="Start Date"
+              inputFormat="yyyy/MM/dd"
+              {...field}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          );
+        }}
+      />
+      <Controller
+        name="end_date"
+        control={control}
+        defaultValue={today()}
+        render={({ field }) => {
+          return (
+            <DatePicker
+              label="End Date"
+              inputFormat="yyyy/MM/dd"
+              {...field}
+              renderInput={(params) => <TextField {...params} />}
+            />
+          );
+        }}
+      />
+
+      <CustomButton className="green" type="submit">
+        검색
+      </CustomButton>
+    </$1Container>
+  );
+};
+export default $1;
+
+endsnippet
+
+
+snippet bc
+
+const RestoreButtonCell = (params) => {
+  const mutate = useWithdrawUserRestoreMutation();
+  const qc = useQueryClient();
+
+  const handleClick = async () => {
+    if (window.confirm("복구 하시겠습니까?")) {
+      const id = get(params, "row.id", 0);
+      const state = get(params, "row.state", 0);
+
+      const result = await mutate.mutateAsync({
+        withdrawl_user_id: id,
+      });
+
+      if (isSuccessReq(result)) {
+        window.alert("성공 하였습니다");
+        qc.invalidateQueries(userKeys.userWithdrawList);
+      }
+    }
+
+    // history.push(`/user/detail/${id}`);
+    // history.push(getuserdetailurl(id, "basic"));
+  };
+
+
+  return (
+    <CustomButton
+      loading={mutate.isLoading}
+      className="yellow"
+      onClick={handleClick}
+    >
+      해제
+    </CustomButton>
+  );
+
+
+};
+
+
+endsnippet
+
+
+snippet lod
+
+import { isEmpty, omit } from "lodash-es";
+
+endsnippet
+

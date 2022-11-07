@@ -1,7 +1,6 @@
 {
   "eslint.nodePath": "./node_modules",
   "eslint.autoFixOnSave": true,
-  "prettier.disableSuccessMessage": true,
   "coc.preferences.formatOnType": false,
   "suggest.timeout": 1000,
   "coc.preferences.formatOnSaveFiletypes": [
@@ -21,6 +20,7 @@
     "heex",
     "prisma"
   ],
+  "javascript.preferences.importModuleSpecifier": "non-relative",
   "tailwindCSS.jsLanguages": [
     "javascript",
     "javascriptreact",
@@ -41,6 +41,11 @@
   },
   "json.format.enable": true,
   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.fetchDeps": false,
+  "elixirLS.mixEnv": "dev",
+  "elixirLS.mixTarget": "test",
   "tailwindCSS.trace.server": "verbose",
   "tsserver.formatOnType": true,
   "diagnostic.errorSign": ">>",
@@ -52,8 +57,4 @@
   "tsserver.log": "verbose",
   "flutter.lsp.initialization.closingLabels": true,
   "flutter.provider.hot-reload": true,
-  "html.autoClosingTags": true,
-  "elixirLS.suggestSpecs": false,
-  "elixirLS.dialyzerEnabled": false,
-  "elixirLS.fetchDeps": false
 }

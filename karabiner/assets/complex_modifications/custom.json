@@ -1,13 +1,13 @@
 {
-  "title": "ctrl + d to backSpace",
+  "title": "ctrl + space to backSpace",
   "rules": [
     {
-      "description": "ctrl + d to backSpace",
+      "description": "ctrl + space to backSpace",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "d",
+            "key_code": "spacebar",
             "modifiers": {
               "mandatory": ["control"],
               "optional": ["caps_lock", "option"]
@@ -16,6 +16,23 @@
           "to": [
             {
               "key_code": "delete_or_backspace"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "(s,o,command) to right option",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_option"
+          },
+          "to": [
+            {
+              "key_code": "left_command",
+              "modifiers": ["left_shift", "left_option"]
             }
           ]
         }
