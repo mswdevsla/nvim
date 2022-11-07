@@ -41,6 +41,12 @@ require("jungho.plugins.surround") -- lua/jungho/plugins/surround
 -- require('jungho.plugins.neosolarized')
 require("jungho.plugins.packer_compiled") -- lua/jungho/plugins/packer_compiled
 
+-- easy motion
+require("jungho.plugins.leap") -- lua/jungho/plugins/leap
+
+-- custom fn
+require("jungho.custom.fn") -- lua/jungho/custom/fn
+
 local has = vim.fn.has
 local is_mac = has("macunix")
 local is_win = has("win32")

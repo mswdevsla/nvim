@@ -136,4 +136,10 @@ packer.startup(function(use)
 		},
 		config = [[require('config.nvim-tree')]],
 	})
+	use({
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").set_default_keymaps()
+		end,
+	})
 end)
