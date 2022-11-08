@@ -101,6 +101,7 @@ packer.startup(function(use)
 	use("MunifTanjim/prettier.nvim")
 	use("MunifTanjim/eslint.nvim")
 	use("L3MON4D3/LuaSnip")
+	use("akinsho/flutter-tools.nvim")
 
 	--treesitter
 	use({
