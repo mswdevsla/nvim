@@ -4,6 +4,8 @@ npm install -g tree-sitter-cli
 /* 아이콘 표시 - 아래 폰트 설치 후 iterms2 -> profiles -> Text ->  use different for no aski -> nert font 찾아서 변경 해줘야함  */
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+brew install lua-language-server
+brew install ripgrep
 
 
 
