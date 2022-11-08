@@ -544,5 +544,34 @@ import { useQueryClient } from 'react-query';
 endsnippet
 
 
+snippet st
+
+import React from "react";
+import { Story, Meta } from "@storybook/react";
+
+const ${2:`!p snip.rv = snip.basename.replace('.stroies','')`}Template: Story<any> = (args) => {
+  return (
+    <div>
+      <div>
+      </div>
+    </div>
+  );
+};
+
+export const $2Button = $2Template.bind({});
+
+export default {
+  title: "Components/Button",
+  component: $2Button,
+  argTypes: {
+    on: {
+      options: [true, false],
+      control: { type: "radio" },
+    },
+
+  },
+} as Meta;
+
+endsnippet
 
 

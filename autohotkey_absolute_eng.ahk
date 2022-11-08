@@ -31,10 +31,14 @@ $CapsLock::
         Send {Esc}
 return
 
+
+
 ^Space::
     if(IME_CHECK("A"))
         Send, {VK15}
+		Send, {Backspace}
 return
+
  
 +Space::
     if(!IME_CHECK("A"))

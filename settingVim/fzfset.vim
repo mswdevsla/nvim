@@ -29,3 +29,4 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 nnoremap <silent> <Leader>g :Rg<CR>
 nnoremap <silent> <Leader>G yiw:Rg <C-r>0<CR>
+nnoremap <silent> <Leader>h :History<CR>

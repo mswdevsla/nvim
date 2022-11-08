@@ -17,7 +17,8 @@
     "yaml",
     "ex",
     "leex",
-    "heex"
+    "heex",
+    "prisma"
   ],
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "tailwindCSS.jsLanguages": [
@@ -56,5 +57,4 @@
   "tsserver.log": "verbose",
   "flutter.lsp.initialization.closingLabels": true,
   "flutter.provider.hot-reload": true,
-  "html.autoClosingTags": true
 }
