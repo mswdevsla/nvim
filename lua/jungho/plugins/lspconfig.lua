@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	--[[ buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) ]]
 	--[[ buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts) ]]
-	--buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+	buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	--[[ buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) ]]
 	--buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	--[[ map('n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>')
@@ -140,6 +140,26 @@ nvim_lsp.cssls.setup({
 nvim_lsp.astro.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+})
+
+local path_to_elixirls = vim.fn.expand("~/.local/share/nvim/mason/packages/elixir-ls/language_server.sh")
+
+nvim_lsp.elixirls.setup({
+	cmd = { path_to_elixirls },
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		elixirLS = {
+			-- I choose to disable dialyzer for personal reasons, but
+			-- I would suggest you also disable it unless you are well
+			-- aquainted with dialzyer and know how to use it.
+			dialyzerEnabled = false,
+			-- I also choose to turn off the auto dep fetching feature.
+			-- It often get's into a weird state that requires deleting
+			-- the .elixir_ls directory and restarting your editor.
+			fetchDeps = false,
+		},
+	},
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

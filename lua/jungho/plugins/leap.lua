@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 -- true to override conflicts
-leap.set_default_keymaps(true)
+leap.set_default_keymaps(false)
 
 leap.setup({
 	case_sensitive = false,
@@ -17,6 +17,7 @@ end
 
 -- Map them to your preferred key, like:
 vim.keymap.set("n", "s", leap_current_window, { silent = true })
+vim.keymap.set("n", "gs", "<Plug>(leap-cross-window)", { silent = true })
 
 vim.cmd([[
 " use clever-f

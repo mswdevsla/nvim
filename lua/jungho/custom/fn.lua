@@ -27,4 +27,4 @@ end
 
 local keymap = vim.keymap
 --[[ keymap.set("n", "<c-[>", ":lua setTotal()<cr>") ]]
-keymap.set("n", "<c-p>", ":lua getPercent()<cr>")
+keymap.set("n", "<leader>1", ":lua getPercent()<cr>")

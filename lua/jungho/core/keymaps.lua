@@ -21,7 +21,7 @@ keymap.set("n", "<leader>rc", ":leftabove vnew ~/.config/nvim/init.lua<cr>")
 keymap.set("n", "<leader>t", ":tabedit")
 keymap.set("n", "<leader><cr>", ":noh<cr>")
 -- Split window
-keymap.set("n", "<leader>s", ":split<Return><C-w>w")
+--[[ keymap.set("n", "<leader>s", ":split<Return><C-w>w") ]]
 keymap.set("n", "<leader>v", ":vsplit<Return><C-w>w")
 keymap.set("n", "<leader><leader>", ":w<cr>")
 keymap.set("n", "<leader>q", ":q<cr>")
