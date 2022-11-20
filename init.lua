@@ -1,8 +1,11 @@
+--:help  rtp -> 경로들
 require("jungho.plugins-setup") -- lua/jungho/plugins-setup
 require("jungho.core.base") -- lua/jungho/core/base
 require("jungho.core.highlights") -- lua/jungho/core/highlights
 require("jungho.core.keymaps") -- lua/jungho/core/keymaps
 require("jungho.core.colorscheme") -- lua/jungho/core/colorscheme
+
+--require("jungho.plugins.ultisnips") -- lua/jungho/plugins/ultisnips
 
 require("jungho.plugins.cmp") -- lua/jungho/plugins/cmp
 require("jungho.plugins.autopairs") -- lua/jungho/plugins/autopairs
@@ -19,7 +22,7 @@ require("jungho.plugins.mason") -- lsp 다운로드 하는 -- lua/jungho/plugins
 require("jungho.plugins.null-ls") -- lua/jungho/plugins/null-ls
 require("jungho.plugins.prettier") -- lua/jungho/plugins/prettier
 require("jungho.plugins.eslint") -- lua/jungho/plugins/prettier
-require("jungho.plugins.flutter") -- lua/jungho/plugins/prettier
+require("jungho.plugins.flutter") -- lua/jungho/plugins/flutter
 
 require("jungho.plugins.telescope") -- lua/jungho/plugins/telescope
 require("jungho.plugins.treesitter") -- lua/jungho/plugins/treesitter
@@ -47,6 +50,7 @@ require("jungho.plugins.leap") -- lua/jungho/plugins/leap
 
 -- custom fn
 require("jungho.custom.fn") -- lua/jungho/custom/fn
+require("jungho.custom.playground") -- lua/jungho/custom/fn
 
 local has = vim.fn.has
 local is_mac = has("macunix")

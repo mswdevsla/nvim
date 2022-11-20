@@ -37,7 +37,8 @@ local on_attach = function(client, bufnr)
 	--[[ buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) ]]
 	--[[ buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts) ]]
 	buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	--[[ buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) ]]
+	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) --[[ buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) ]]
+	--[[ buf_set_keymap("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts) ]]
 	--buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	--[[ map('n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>')
 	map('n','gd','<cmd>lua vim.lsp.buf.definition()<CR>')
@@ -45,7 +46,6 @@ local on_attach = function(client, bufnr)
 	map('n','gr','<cmd>lua vim.lsp.buf.references()<CR>')
 	map('n','gs','<cmd>lua vim.lsp.buf.signature_help()<CR>')
 	map('n','gi','<cmd>lua vim.lsp.buf.implementation()<CR>')
-	map('n','gt','<cmd>lua vim.lsp.buf.type_definition()<CR>')
 	map('n','<leader>gw','<cmd>lua vim.lsp.buf.document_symbol()<CR>')
 	map('n','<leader>gW','<cmd>lua vim.lsp.buf.workspace_symbol()<CR>')
 	map('n','<leader>ah','<cmd>lua vim.lsp.buf.hover()<CR>')
