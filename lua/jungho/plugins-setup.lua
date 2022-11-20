@@ -101,7 +101,9 @@ packer.startup(function(use)
 	use("MunifTanjim/prettier.nvim")
 	use("MunifTanjim/eslint.nvim")
 	use("L3MON4D3/LuaSnip")
+	--[[ flutter dart lsp   ]]
 	use("akinsho/flutter-tools.nvim")
+	use("dart-lang/dart-vim-plugin")
 
 	--treesitter
 	use({
@@ -143,4 +145,6 @@ packer.startup(function(use)
 			require("leap").set_default_keymaps()
 		end,
 	})
+
+	use("rcarriga/nvim-notify") -- For git blame & browse
 end)
