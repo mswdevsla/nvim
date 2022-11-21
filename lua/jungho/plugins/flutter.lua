@@ -9,4 +9,4 @@ keymap.set("n", prefix_flutter .. "fp", ":FlutterPubGet<enter>") ]]
 
 fluttertools.setup({})
 
-keymap.set("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
+--[[ keymap.set("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>") ]]

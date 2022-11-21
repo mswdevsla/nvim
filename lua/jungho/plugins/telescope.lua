@@ -71,21 +71,10 @@ end)
 vim.keymap.set("n", "<leader>fg", function()
 	builtin.live_grep()
 end)
-vim.keymap.set("n", "<leader>5", function()
-	builtin.buffers()
-end)
--- vim.keymap.set("n", ";t", function()
--- 	builtin.help_tags()
--- end)
---[[
-vim.keymap.set('n', ';;', function()
-  builtin.resume()
-end)
---]]
-vim.keymap.set("n", "<leader>e", function()
+vim.keymap.set("n", "<leader>fe", function()
 	builtin.diagnostics()
 end)
-vim.keymap.set("n", "<leader>;", function()
+vim.keymap.set("n", "<leader>f;", function()
 	telescope.extensions.file_browser.file_browser({
 		path = "%:p:h",
 		cwd = telescope_buffer_dir(),
@@ -97,3 +86,15 @@ vim.keymap.set("n", "<leader>;", function()
 		layout_config = { height = 40 },
 	})
 end)
+
+vim.keymap.set("n", "<leader>5", function()
+	builtin.buffers()
+end)
+-- vim.keymap.set("n", ";t", function()
+-- 	builtin.help_tags()
+-- end)
+--[[
+vim.keymap.set('n', ';;', function()
+  builtin.resume()
+end)
+--]]
