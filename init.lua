@@ -50,15 +50,15 @@ require("jungho.plugins.leap") -- lua/jungho/plugins/leap
 
 -- custom fn
 require("jungho.custom.fn") -- lua/jungho/custom/fn
-require("jungho.custom.playground") -- lua/jungho/custom/fn
+require("jungho.custom.playground") -- lua/jungho/custom/playground
 
 local has = vim.fn.has
 local is_mac = has("macunix")
 local is_win = has("win32")
 
 if is_mac then
-	require("jungho.core.macos")
+  require("jungho.core.macos")
 end
 if is_win then
-	require("jungho.core.windows")
+  require("jungho.core.windows")
 end
