@@ -35,7 +35,7 @@ local on_attach = function(client, bufnr)
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	--[[ buf_set_keymap("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) ]]
-	--[[ buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts) ]]
+	buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	--[[ buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts) ]]
 	--[[ buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) --[[ buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) ]]
 	--[[ buf_set_keymap("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts) ]]
@@ -125,6 +125,13 @@ nvim_lsp.sumneko_lua.setup({
 			},
 		},
 	},
+})
+
+nvim_lsp.dartls.setup({
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		enable_format_on_save(client, bufnr)
+	end,
 })
 
 nvim_lsp.tailwindcss.setup({

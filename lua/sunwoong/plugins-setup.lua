@@ -80,7 +80,7 @@ packer.startup(function(use)
 	use("tpope/vim-repeat")
 
 	--ultisnips
-	use("SirVer/ultisnips")
+	--use("SirVer/ultisnips")
 
 	-- colorscheme
 	-- use 'junegunn/seoul256.vim'
@@ -147,4 +147,5 @@ packer.startup(function(use)
 	})
 
 	use("rcarriga/nvim-notify") -- For git blame & browse
+	use("folke/tokyonight.nvim") -- color theme
 end)

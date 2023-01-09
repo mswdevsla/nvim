@@ -20,20 +20,27 @@ keymap.set("n", "<leader>rc", ":leftabove vnew ~/.config/nvim/init.lua<cr>")
 -- New tab
 keymap.set("n", "<leader><cr>", ":noh<cr>")
 -- Split window
---[[ keymap.set("n", "<leader>s", ":split<Return><C-w>w") ]]
+keymap.set("n", "<leader>s", ":split<Return><C-w>w")
 keymap.set("n", "<leader>v", ":vsplit<Return><C-w>w")
 keymap.set("n", "<leader><leader>", ":w<cr>")
 keymap.set("n", "<leader>q", ":q<cr>")
 -- Move window
 --keymap.set('n', '<Space>', '<C-w>w')
-keymap.set("", "<left>", "<C-w>h")
-keymap.set("", "<up>", "<C-w>k")
-keymap.set("", "<down>", "<C-w>j")
-keymap.set("", "<right>", "<C-w>l")
+keymap.set("", "<C-h>", "<C-w>h")
+keymap.set("", "<C-j>", "<C-w>j")
+keymap.set("", "<C-k>", "<C-w>k")
+keymap.set("", "<C-l>", "<C-w>l")
+--[[ keymap.set("", "<left>", "<C-w>h") ]]
+--[[ keymap.set("", "<up>", "<C-k>k") ]]
+--[[ keymap.set("", "<down>", "<C-j>j") ]]
+--[[ keymap.set("", "<right>", "<C-w>l") ]]
 
 -- Resize window
 keymap.set("n", "-", ":vertical resize -5<cr>")
 keymap.set("n", "=", ":vertical resize +5<cr>")
+keymap.set("n", "<leader>-", ":horizontal resize -5<cr>")
+keymap.set("n", "<leader>=", ":horizontal resize +5<cr>")
+
 --buffer
 keymap.set("n", "<leader>1", ":bfirst<cr>")
 keymap.set("n", "<leader>2", ":bp<cr>")

@@ -1,64 +1,66 @@
 --:help  rtp -> 경로들
-require("jungho.plugins-setup") -- lua/jungho/plugins-setup
-require("jungho.core.base") -- lua/jungho/core/base
-require("jungho.core.highlights") -- lua/jungho/core/highlights
-require("jungho.core.keymaps") -- lua/jungho/core/keymaps
-require("jungho.core.colorscheme") -- lua/jungho/core/colorscheme
+require("sunwoong.plugins-setup") -- lua/sunwoong/plugins-setup
+require("sunwoong.core.base") -- lua/sunwoong/core/base
+require("sunwoong.core.highlights") -- lua/sunwoong/core/highlights
+require("sunwoong.core.keymaps") -- lua/sunwoong/core/keymaps
+require("sunwoong.core.colorscheme") -- lua/sunwoong/core/colorscheme
 
---require("jungho.plugins.ultisnips") -- lua/jungho/plugins/ultisnips
+--require("sunwoong.plugins.ultisnips") -- lua/sunwoong/plugins/ultisnips
 
-require("jungho.plugins.cmp") -- lua/jungho/plugins/cmp
-require("jungho.plugins.autopairs") -- lua/jungho/plugins/autopairs
-require("jungho.plugins.bufferline") -- lua/jungho/plugins/bufferline require("jungho.plugins.cmp") -- jungho/plugins/cmp
-require("jungho.plugins.colorizer") -- lua/jungho/plugins/colorizer
-require("jungho.plugins.web-devicons") -- lua/jungho/plugins/web-devicons
+require("sunwoong.plugins.cmp") -- lua/sunwoong/plugins/cmp
+require("sunwoong.plugins.autopairs") -- lua/sunwoong/plugins/autopairs
+require("sunwoong.plugins.bufferline") -- lua/sunwoong/plugins/bufferline require("sunwoong.plugins.cmp") -- sunwoong/plugins/cmp
+require("sunwoong.plugins.colorizer") -- lua/sunwoong/plugins/colorizer
+require("sunwoong.plugins.web-devicons") -- lua/sunwoong/plugins/web-devicons
 
 --lsp
--- require('jungho.plugins.lsp-colors')
-require("jungho.plugins.lspconfig") -- lua/jungho/plugins/lspconfig
-require("jungho.plugins.lspkind") -- lua/jungho/plugins/lspkind
-require("jungho.plugins.lspsaga") -- lua/jungho/plugins/lspsaga
-require("jungho.plugins.mason") -- lsp 다운로드 하는 -- lua/jungho/plugins/mason
-require("jungho.plugins.null-ls") -- lua/jungho/plugins/null-ls
-require("jungho.plugins.prettier") -- lua/jungho/plugins/prettier
-require("jungho.plugins.eslint") -- lua/jungho/plugins/prettier
-require("jungho.plugins.flutter") -- lua/jungho/plugins/flutter
+-- require('sunwoong.plugins.lsp-colors')
+require("sunwoong.plugins.lspconfig") -- lua/sunwoong/plugins/lspconfig
+require("sunwoong.plugins.lspkind") -- lua/sunwoong/plugins/lspkind
+require("sunwoong.plugins.lspsaga") -- lua/sunwoong/plugins/lspsaga
+require("sunwoong.plugins.mason") -- lsp 다운로드 하는 -- lua/sunwoong/plugins/mason
+require("sunwoong.plugins.null-ls") -- lua/sunwoong/plugins/null-ls
+require("sunwoong.plugins.prettier") -- lua/sunwoong/plugins/prettier
+require("sunwoong.plugins.eslint") -- lua/sunwoong/plugins/prettier
+require("sunwoong.plugins.flutter") -- lua/sunwoong/plugins/flutter
+require("sunwoong.plugins.dart") -- lua/sunwoong/plugins/dart
 
-require("jungho.plugins.telescope") -- lua/jungho/plugins/telescope
-require("jungho.plugins.treesitter") -- lua/jungho/plugins/treesitter
--- require('jungho.plugins.tokyonight')
-require("jungho.plugins.ts-autotag") -- lua/jungho/plugins/ts-autotag
-require("jungho.plugins.web-devicons") -- lua/jungho/plugins/web-devicons
-require("jungho.plugins.zen-mode") -- lua/jungho/plugins/zen-mode
+require("sunwoong.plugins.telescope") -- lua/sunwoong/plugins/telescope
+require("sunwoong.plugins.treesitter") -- lua/sunwoong/plugins/treesitter
+-- require('sunwoong.plugins.tokyonight')
+require("sunwoong.plugins.tokyonight2") -- lua/sunwoong/plugins/tokyonight2
+require("sunwoong.plugins.ts-autotag") -- lua/sunwoong/plugins/ts-autotag
+require("sunwoong.plugins.web-devicons") -- lua/sunwoong/plugins/web-devicons
+require("sunwoong.plugins.zen-mode") -- lua/sunwoong/plugins/zen-mode
 
-require("jungho.plugins.lualine") -- lua/jungho/plugins/lualine
-require("jungho.plugins.nvim-tree") -- lua/jungho/plugins/nvim-tree
+require("sunwoong.plugins.lualine") -- lua/sunwoong/plugins/lualine
+require("sunwoong.plugins.nvim-tree") -- lua/sunwoong/plugins/nvim-tree
 
 -- git
-require("jungho.plugins.git") -- lua/jungho/plugins/git
-require("jungho.plugins.gitsigns") -- lua/jungho/plugins/lualine
-require("jungho.plugins.fugitive") -- lua/jungho/plugins/fugitive
+require("sunwoong.plugins.git") -- lua/sunwoong/plugins/git
+require("sunwoong.plugins.gitsigns") -- lua/sunwoong/plugins/lualine
+require("sunwoong.plugins.fugitive") -- lua/sunwoong/plugins/fugitive
 
-require("jungho.plugins.comment") -- lua/jungho/plugins/comment
-require("jungho.plugins.surround") -- lua/jungho/plugins/surround
+require("sunwoong.plugins.comment") -- lua/sunwoong/plugins/comment
+require("sunwoong.plugins.surround") -- lua/sunwoong/plugins/surround
 
--- require('jungho.plugins.neosolarized')
-require("jungho.plugins.packer_compiled") -- lua/jungho/plugins/packer_compiled
+-- require('sunwoong.plugins.neosolarized')
+require("sunwoong.plugins.packer_compiled") -- lua/sunwoong/plugins/packer_compiled
 
 -- easy motion
-require("jungho.plugins.leap") -- lua/jungho/plugins/leap
+require("sunwoong.plugins.leap") -- lua/sunwoong/plugins/leap
 
 -- custom fn
-require("jungho.custom.fn") -- lua/jungho/custom/fn
-require("jungho.custom.playground") -- lua/jungho/custom/playground
+require("sunwoong.custom.fn") -- lua/sunwoong/custom/fn
+require("sunwoong.custom.playground") -- lua/sunwoong/custom/playground
 
 local has = vim.fn.has
 local is_mac = has("macunix")
 local is_win = has("win32")
 
 if is_mac then
-  require("jungho.core.macos")
+  require("sunwoong.core.macos")
 end
 if is_win then
-  require("jungho.core.windows")
+  require("sunwoong.core.windows")
 end
